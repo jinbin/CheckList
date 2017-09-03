@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="page">
+    <button>Home</button>
+    <navigator url="/pages/index/index" class="weui-cell weui-cell_access">
+      <view class="page__hd">
+        <view class="page__title">{{motto}}</view>
+        <view class="page__desc">清单检查法是芒格本人推崇的一种投资方法，每次投资前他都会根据清单来确定这次投资是否有价值。这些原则出现的先后顺序跟它们的重要性无关，每个原则都必须被视为整个复杂的投资分析过程的一部分</view>
+      </view>
+    </navigator>
+</view>

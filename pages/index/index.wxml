@@ -1,9 +1,11 @@
 <!--index.wxml-->
 <view class="page">
+  <navigator url="/pages/menu/menu" class="weui-cell weui-cell_access">
     <view class="page__hd">
         <view class="page__title">{{motto}}</view>
         <view class="page__desc">清单检查法是芒格本人推崇的一种投资方法，每次投资前他都会根据清单来确定这次投资是否有价值。这些原则出现的先后顺序跟它们的重要性无关，每个原则都必须被视为整个复杂的投资分析过程的一部分</view>
     </view>
+  </navigator>
 
         <view class="page__bd page__bd_spacing">
         <view class="kind-list">
@@ -15,10 +17,7 @@
                     <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
                         <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
                             <block wx:for="{{item.pages}}" wx:for-item="page" wx:key="*this">
-                                <!-- <navigator url="{{page}}/{{page}}" class="weui-cell weui-cell_access"> -->
-                                <view class="weui-cell__bd">{{page}}</view>
-                                <!-- <view class="weui-cell__ft weui-cell__ft_in-access"></view> -->
-                                <!-- </navigator> -->
+                                <button>{{page}}</button>
                             </block>
                         </view>
                     </view>
@@ -27,4 +26,7 @@
         </view>
     </view>
 
+    <navigator url="/pages/menu/menu" class="weui-cell weui-cell_access">
+    <button>Home</button>
+  </navigator>
 </view>

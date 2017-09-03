@@ -88,3 +88,7 @@
   background-color: #F8F8FF;
   font-family: SimSun;
   }
+
+  .weui-cell weui-cell_access{
+    align-content: center;
+  }
