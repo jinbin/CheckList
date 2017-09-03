@@ -1,0 +1,11 @@
+{
+  "pages":[
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"black",
+    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarTitleText": "CHECKLIST for 投资",
+    "navigationBarTextStyle":"black"
+  }
+}
