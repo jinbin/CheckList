@@ -8,7 +8,7 @@
   "window":{
     "backgroundTextStyle":"black",
     "navigationBarBackgroundColor": "#f8f8f8",
-    "navigationBarTitleText": "小清单",
+    "navigationBarTitleText": "口袋清单",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
