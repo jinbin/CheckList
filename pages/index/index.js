@@ -9,7 +9,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    list: checklist
+    list: checklist['芒格']
   },
 
   kindToggle: function (e) {

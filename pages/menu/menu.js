@@ -10,5 +10,12 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     list: checklist
+  },
+
+  onShareAppMessage: function () {
+    return {
+      title: '看看有没有你喜欢的清单吧',
+      path: '/pages/menu/menu'
+    }
   }
 })
