@@ -33,3 +33,16 @@ page{
     height: 2rpx;
     background: #aaa;
 }
+
+.middle__desc {
+    margin-top: 5px;
+    color: green;
+    text-align: center;
+    font-size: 14px;
+}
+
+.titleItem {
+    margin-top: 5px;
+    text-align: center;
+    font-size: 14px;
+}

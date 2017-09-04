@@ -13,7 +13,7 @@ Page({
 
   onShareAppMessage: function () {
     return {
-      title: '看看有没有你喜欢的清单吧',
+      title: '看看有你喜欢的清单吗?',
       path: '/pages/menu/menu'
     }
   }

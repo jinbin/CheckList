@@ -1,13 +1,31 @@
 {
   "pages":[
+    "pages/menu/menu",
     "pages/index/index",
     "pages/list/list",
-    "pages/menu/menu"
+    "pages/about/about"
   ],
   "window":{
     "backgroundTextStyle":"black",
     "navigationBarBackgroundColor": "#f8f8f8",
-    "navigationBarTitleText": "清单",
+    "navigationBarTitleText": "小清单",
     "navigationBarTextStyle":"black"
-  }
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/menu/menu",
+        "iconPath": "./images/home.png",
+        "selectedIconPath": "images/home-selected.png",
+        "text": "清单广场"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "iconPath": "./images/find.png",
+        "selectedIconPath": "images/find-selected.png",
+        "text": "了解清单"
+      }
+    ]
+  },
+  "debug": true
 }

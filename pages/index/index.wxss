@@ -92,3 +92,9 @@
   .weui-cell weui-cell_access{
     align-content: center;
   }
+
+  .page__title {
+    text-align: left;
+    font-size: 20px;
+    font-weight: 400;
+}
