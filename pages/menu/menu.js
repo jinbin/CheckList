@@ -4,7 +4,6 @@ const app = getApp()
 
 Page({
   data: {
-    motto: '芒格投资原则检查清单',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
