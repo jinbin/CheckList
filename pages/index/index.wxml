@@ -17,7 +17,8 @@
                     <view class="kind-list__item-bd {{item.open ? 'kind-list__item-bd_show' : ''}}">
                         <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
                             <block wx:for="{{item.pages}}" wx:for-item="page" wx:key="*this">
-                                <button>{{page}}</button>
+                                    <view class="line"></view>
+                                    <view class="pageItem">{{page}}</view>
                             </block>
                         </view>
                     </view>
