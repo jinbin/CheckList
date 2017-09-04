@@ -1,4 +1,4 @@
-//index.js
+//menu.js
 //获取应用实例
 const app = getApp()
 var checklist = require('../../data/checklist')

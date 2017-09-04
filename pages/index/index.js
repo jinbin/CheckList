@@ -25,13 +25,6 @@ Page({
       list: list
     });
   },
-
-  //事件处理函数
-  bindViewTap: function() {
-    wx.navigateTo({
-      url: '../list/list'
-    })
-  },
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({
