@@ -67,5 +67,13 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  onShareAppMessage: function () {
+    return {
+      title: '芒格的这份清单请你收好',
+      path: '/pages/index/index'
+    }
   }
+
 })
