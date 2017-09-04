@@ -1,12 +1,13 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/list/list",
     "pages/menu/menu"
   ],
   "window":{
     "backgroundTextStyle":"black",
     "navigationBarBackgroundColor": "#f8f8f8",
-    "navigationBarTitleText": "清单 Get Things Right",
+    "navigationBarTitleText": "清单",
     "navigationBarTextStyle":"black"
   }
 }

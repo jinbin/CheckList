@@ -9,7 +9,7 @@ Page({
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
     list: app.checklist['芒格'],
-    intro: app.intro['芒格']
+    intro: app.intro['芒格投资原则检查清单']["desc"]
   },
 
   kindToggle: function (e) {

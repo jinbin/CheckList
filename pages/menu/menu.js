@@ -1,7 +1,6 @@
 //menu.js
 //获取应用实例
 const app = getApp()
-var checklist = require('../../data/checklist')
 
 Page({
   data: {
@@ -9,7 +8,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    intro: app.intro['芒格']
+    intro: app.intro
   },
 
   onShareAppMessage: function () {
