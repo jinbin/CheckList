@@ -9,7 +9,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    list: checklist
+    intro: app.intro['芒格']
   },
 
   onShareAppMessage: function () {

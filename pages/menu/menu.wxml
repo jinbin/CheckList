@@ -1,6 +1,6 @@
 <!--index.wxml-->
 <view class="page">
-    <button>Home</button>
+    <button>清单广场</button>
     <navigator url="/pages/index/index" class="weui-cell weui-cell_access">
       <view class="page__hd">
         <view class="page__title">{{motto}}</view>

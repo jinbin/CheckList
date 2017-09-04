@@ -8,7 +8,8 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    list: app.checklist['芒格']
+    list: app.checklist['芒格'],
+    intro: app.intro['芒格']
   },
 
   kindToggle: function (e) {
