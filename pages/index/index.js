@@ -1,7 +1,6 @@
 //index.js
 //获取应用实例
 const app = getApp()
-var checklist = require('../../data/checklist')
 
 Page({
   data: {
@@ -9,7 +8,7 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    list: checklist['芒格']
+    list: app.checklist['芒格']
   },
 
   kindToggle: function (e) {
