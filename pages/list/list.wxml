@@ -18,6 +18,7 @@
                         <view class="weui-cells {{item.open ? 'weui-cells_show' : ''}}">
                             <block wx:for="{{item.pages}}" wx:for-item="page" wx:key="*this">
                               <view class="pageItem">{{page}}</view>
+                              <view class="line"></view>
                             </block>
                         </view>
                     </view>

@@ -1,9 +1,7 @@
 {
   "pages":[
     "pages/menu/menu",
-    "pages/index/index",
     "pages/list/list",
-    "pages/list1/list1",
     "pages/about/about"
   ],
   "window":{
