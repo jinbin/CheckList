@@ -36,8 +36,8 @@ Page({
   
   onShareAppMessage: function (options) {
     return {
-      title: "这份清单请你收好",
-      path: "/pages/menu/menu"
+      title: "这份实用的清单请你收好",
+      path: "/pages/list/list?motto=" + this.data.motto
     }
   }
 
