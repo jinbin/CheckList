@@ -1,7 +1,7 @@
 <!--menu.wxml-->
 <view class="page">
     <block wx:for="{{intro}}" wx:key="id">
-      <navigator url="/pages/{{item['page']}}/{{item['page']}}" class="weui-cell weui-cell_access">
+      <navigator url="../list/list?motto={{item.title}}" class="weui-cell weui-cell_access">
         <view class="page__hd">
           <view class="page__title">{{item["title"]}}</view>
           <view class="page__desc">{{item["desc"]}}</view>

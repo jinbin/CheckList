@@ -4,12 +4,20 @@ const app = getApp()
 
 Page({
   data: {
-    motto: '巨人的工具',
+    motto: '',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    list: app.checklist['巨人的工具'],
-    intro: app.intro['巨人的工具']['desc']
+    list: [],
+    intro: ''
+  },
+
+  onLoad: function(options){
+    this.setData({
+      motto: options.motto,
+      list: app.checklist[options.motto],
+      intro: app.intro[options.motto]['desc']
+    })
   },
 
   kindToggle: function (e) {
@@ -26,10 +34,10 @@ Page({
     });
   },
   
-  onShareAppMessage: function () {
+  onShareAppMessage: function (options) {
     return {
-      title: '巨人的工具这份清单请你收好',
-      path: '/pages/list/list'
+      title: "这份清单请你收好",
+      path: "/pages/menu/menu"
     }
   }
 

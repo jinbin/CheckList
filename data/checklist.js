@@ -1,5 +1,5 @@
 module.exports = {
-  "芒格": [
+  "芒格投资原则检查清单": [
     {
       id: 'risk',
       name: '风险',
