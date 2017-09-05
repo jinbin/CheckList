@@ -5,3 +5,15 @@
     font-size: 20px;
     font-weight: 400;
 }
+
+.contact_view {
+  background-color: #C6E2FF;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  align-items: center;
+  padding-top: 10px;
+  border-radius: 20px;
+  line-height: 42px;
+  padding: 2px;
+}

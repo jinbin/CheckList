@@ -7,3 +7,7 @@
         </block>
     </view>
 </view>
+
+<view class="contact_view">
+  <contact-button type="default-light" size="20" session-from="about"></contact-button>
+</view>
