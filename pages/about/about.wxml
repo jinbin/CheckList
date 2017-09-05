@@ -2,6 +2,8 @@
 <view class="page">
     <view class="page__hd">
         <view class="summary__title">{{motto}}</view>
-        <view class="page__desc">{{intro}}</view>
+        <block wx:for="{{intro}}" wx:key="id">
+          <view class="page__desc">{{item}}</view>
+        </block>
     </view>
 </view>
