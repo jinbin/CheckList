@@ -8,11 +8,14 @@
   ],
   "window":{
     "backgroundTextStyle":"black",
-    "navigationBarBackgroundColor": "#f8f8f8",
+    "navigationBarBackgroundColor": "#C6E2FF",
     "navigationBarTitleText": "口袋清单",
     "navigationBarTextStyle":"black"
   },
   "tabBar": {
+    "color": "black",
+    "selectedColor": "black",
+    "backgroundColor": "#C6E2FF",
     "list": [
       {
         "pagePath": "pages/menu/menu",

@@ -1,6 +1,6 @@
 /**app.wxss**/
 .page__hd {
-    padding: 40px;
+    padding: 30px;
 }
 
 .page__title {
