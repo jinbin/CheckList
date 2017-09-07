@@ -14,8 +14,8 @@ Page({
 
   onLoad: function(options){
     this.setData({
-      motto: options.motto,
-      list: app.checklist[options.id],
+      id: options.id,
+      list: app.checklist[app.intro[options.id]['title']],
       intro: app.intro[options.id]['desc']
     })
   },
@@ -37,7 +37,7 @@ Page({
   onShareAppMessage: function (options) {
     return {
       title: "这份实用的清单请你收好",
-      path: "/pages/list/list?motto=" + this.data.motto
+      path: "/pages/list/list?id=" + this.data.id
     }
   }
 
