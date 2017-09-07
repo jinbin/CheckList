@@ -15,8 +15,8 @@ Page({
   onLoad: function(options){
     this.setData({
       motto: options.motto,
-      list: app.checklist[options.motto],
-      intro: app.intro[options.motto]['desc']
+      list: app.checklist[options.id],
+      intro: app.intro[options.id]['desc']
     })
   },
 
