@@ -12,7 +12,12 @@ Page({
   poster:'https://y.gtimg.cn/music/photo_new/T002R300x300M000001mTkmb4GJlh4.jpg',
   name: '光年之外',
   author: '邓紫棋',
-  src: "https://ws.stream.qqmusic.qq.com/200255722.m4a"
+  src: "https://ws.stream.qqmusic.qq.com/200255722.m4a?fromtag=46",
+  },
+
+  onReady: function(options) {
+    this.audioCtx = wx.createAudioContext('myAudio')
+    this.audioCtx.play()
   },
 
   onShareAppMessage: function (options) {
