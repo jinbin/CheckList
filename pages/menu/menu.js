@@ -10,23 +10,24 @@ Page({
     intro: app.intro
   },
 
-  touchS: function(e){
-    console.log("touchS" + e.touches[0].clientX)
-    if (e.touches.length == 1) {
+  touchS: function(options){
+    console.log("touchS" + options.touches[0].clientX)
+    if (options.touches.length == 1) {
       this.setData({
         //记录触摸起始位置的X坐标
-        startX: e.touches[0].clientX
+        startX: options.touches[0].clientX
       })
     }
   },
 
-  touchM: function(e){
-    console.log("touchM" + e)
+  touchM: function(options){
+    console.log("touchM" + JSON.stringify(options))
 
-    if(e.touches.length == 1) {
-      var moveX = e.touches[0].clientX
+    if(options.touches.length == 1) {
+      var moveX = options.touches[0].clientX
       var distX = this.data.startX - moveX
       var txtStyle
+      var delBtnWidth = 80
 
       if(distX <= 0){
         console.log("distX <=0: " + distX)
@@ -34,22 +35,25 @@ Page({
       }else if(distX > 0){
         console.log("distX >0: " + distX)
         txtStyle = "left:-" + distX + "px"
+        if (distX >= delBtnWidth){
+          txtStyle = "left:-" + delBtnWidth + "px"
+        }
       }
 
-      console.log("txtStyle：" + txtStyle)
-
-      var index = e.currentTarget.dataset
-
-      console.log("index：" + index)
+      var index = options.currentTarget.id
+      console.log("index: " + index)
 
       var list = this.data.intro
-      
-      console.log("list: " + list)
+
+      list[index].txtStyle = txtStyle
 
       this.setData({
         intro: list
       });
     }
+  },
+
+  touchE: function(options){
 
   },
 

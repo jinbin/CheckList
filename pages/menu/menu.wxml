@@ -1,10 +1,10 @@
 <!--menu.wxml-->
 <view class="page">
     <block wx:for="{{intro}}" wx:key="title" wx:for-index="id">
-      <navigator url="../list/list?id={{id}}" class="weui-cell weui-cell_access" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
+      <navigator id="{{id}}" url="../list/list?id={{id}}" class="weui-cell weui-cell_access" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
         <view class="page__hd" >
-          <view class="page__title">{{item["title"]}}</view>
-          <view class="page__desc">{{item["desc"]}}</view>
+          <view style="{{item.txtStyle}}" class="page__title">{{item["title"]}}</view>
+          <view style="{{item.txtStyle}}" class="page__desc">{{item["desc"]}}</view>
         </view>
 
         <!-- 左滑隐藏部分>

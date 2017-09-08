@@ -7,6 +7,7 @@
     text-align: left;
     font-size: 20px;
     font-weight: 400;
+    position:relative;
 }
 
 .page__desc {
@@ -14,6 +15,7 @@
     color: #888888;
     text-align: left;
     font-size: 14px;
+    position:relative;
 }
 
 page{
