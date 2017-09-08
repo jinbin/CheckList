@@ -10,6 +10,20 @@ Page({
     intro: app.intro
   },
 
+  onShow: function(options) {
+    console.log("onLoad" + JSON.stringify(options))
+
+    var list = this.data.intro
+
+    for (var i = 0; i < list.length; i++) {
+      list[i].txtStyle = "left:0px"
+    }
+
+    this.setData({
+      intro: list
+    });
+  },
+
   touchS: function(options){
     console.log("touchS" + options.touches[0].clientX)
     if (options.touches.length == 1) {
@@ -45,6 +59,9 @@ Page({
 
       var list = this.data.intro
 
+      for (var i = 0; i < list.length; i++) {
+        list[i].txtStyle = "left:0px"
+      }
       list[index].txtStyle = txtStyle
 
       this.setData({
@@ -54,7 +71,17 @@ Page({
   },
 
   touchE: function(options){
+    // console.log("touchE: " + JSON.stringify(options))
 
+    // var index = options.currentTarget.id
+
+    // var list = this.data.intro
+
+    // //list[index].txtStyle = "left:0px"
+
+    // this.setData({
+    //   intro: list
+    // });
   },
 
   onShareAppMessage: function () {
