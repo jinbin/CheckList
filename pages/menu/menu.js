@@ -41,18 +41,23 @@ Page({
       var moveX = options.touches[0].clientX
       var distX = this.data.startX - moveX
       var txtStyle
+      var titleColor
       var delBtnWidth = 80
 
       if(distX <= 0){
         console.log("distX <=0: " + distX)
         txtStyle = "left:0px"
+        titleColor = "color:black"
       }else if(distX > 0){
         console.log("distX >0: " + distX)
         txtStyle = "left:-" + distX + "px"
         if (distX >= delBtnWidth){
           txtStyle = "left:-" + delBtnWidth + "px"
         }
+        titleColor = "color:red"
       }
+
+      console.log("titleColr: " + titleColor)
 
       var index = options.currentTarget.id
       console.log("index: " + index)
@@ -63,6 +68,7 @@ Page({
         list[i].txtStyle = "left:0px"
       }
       list[index].txtStyle = txtStyle
+      list[index].titleColor = titleColor
 
       this.setData({
         intro: list

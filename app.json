@@ -1,14 +1,15 @@
 {
-  "pages":[
+  "pages": [
+    "pages/my/my",
     "pages/menu/menu",
     "pages/list/list",
-    "pages/about/about"
+    "pages/about/about" 
   ],
-  "window":{
-    "backgroundTextStyle":"black",
+  "window": {
+    "backgroundTextStyle": "black",
     "navigationBarBackgroundColor": "#C6E2FF",
     "navigationBarTitleText": "口袋清单",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "list": [
@@ -17,6 +18,12 @@
         "iconPath": "./images/home.png",
         "selectedIconPath": "images/home-selected.png",
         "text": "清单广场"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "./images/account.png",
+        "selectedIconPath": "images/account-selected.png",
+        "text": "收藏夹"        
       },
       {
         "pagePath": "pages/about/about",

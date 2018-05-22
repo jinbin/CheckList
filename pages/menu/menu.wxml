@@ -3,16 +3,14 @@
     <block wx:for="{{intro}}" wx:key="title" wx:for-index="id">
       <navigator id="{{id}}" url="../list/list?id={{id}}" class="weui-cell weui-cell_access" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
         <view class="page__hd" >
-          <view style="{{item.txtStyle}}" class="page__title">{{item["title"]}}</view>
+          <view style="{{item.txtStyle}};{{item.titleColor}}" class="page__title">{{item["title"]}}</view>
           <view style="{{item.txtStyle}}" class="page__desc">{{item["desc"]}}</view>
         </view>
 
-        <!-- 左滑隐藏部分>
-        <view bindtap="delItem" class="posit">
+        <!-- <view bindtap="delItem" class="posit">
             <view class="editor" data-addressid="{{item.address.ID}}" catchtap="setDefaultAddress">设为默认地址</view>
             <view class="del" data-addressid="{{item.address.ID}}" data-index="{{index}}" catchtap="delAddress">删除</view>
-        </view>
-        <!-- 左滑隐藏部分 -->
+        </view> -->
 
       </navigator>
     </block>
