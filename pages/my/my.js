@@ -9,16 +9,23 @@ Page({
   data: {},
 
   getUserInfo: function(e) {
-    wx.getUserInfo({
-      success: res => {
-        app.globalData.userInfo = res.userInfo
-        app.globalData.hasUserInfo = true
-        this.setData({
-          userInfo: res.userInfo,
-          hasUserInfo: true
-        })
-      }
-    })
+    if (!app.globalData.hasUserInfo){
+      wx.getUserInfo({
+        success: res => {
+          app.globalData.userInfo = res.userInfo
+          app.globalData.hasUserInfo = true
+          this.setData({
+            userInfo: res.userInfo,
+            hasUserInfo: true
+          })
+        }
+      })
+    }else{
+      this.setData({
+        userInfo: app.globalData.userInfo,
+        hasUserInfo: true
+      })
+    }
   },
 
   /**
