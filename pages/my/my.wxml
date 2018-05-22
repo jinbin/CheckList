@@ -1,7 +1,10 @@
 <!--pages/my/my.wxml-->
 
 <view class="container">
+  <button wx:if="{{!hasUserInfo}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击开启你的收藏夹 </button>
+</view>
 
-  <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击开启你的收藏夹 </button>
-
+<view wx:if="{{hasUserInfo}}" class="userinfo-section">
+  <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
+  <text class="userinfo-nickname">Hi, {{userInfo.nickName}}</text>
 </view>

@@ -58,3 +58,20 @@ page{
   padding: 200rpx 0;
   box-sizing: border-box;
 } 
+
+.userinfo-section {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: right;
+}
+
+.userinfo-avatar {
+  width: 40rpx;
+  height: 40rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #aaa;
+}

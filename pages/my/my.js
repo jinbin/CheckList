@@ -1,11 +1,24 @@
 // pages/my/my.js
+const app = getApp()
+
 Page({
 
   /**
    * 页面的初始数据
    */
-  data: {
-  
+  data: {},
+
+  getUserInfo: function(e) {
+    wx.getUserInfo({
+      success: res => {
+        app.globalData.userInfo = res.userInfo
+        app.globalData.hasUserInfo = true
+        this.setData({
+          userInfo: res.userInfo,
+          hasUserInfo: true
+        })
+      }
+    })
   },
 
   /**
