@@ -1,9 +1,9 @@
 {
   "pages": [
-    "pages/my/my",
     "pages/menu/menu",
-    "pages/list/list",
-    "pages/about/about" 
+    "pages/about/about",
+    "pages/my/my",
+    "pages/list/list"
   ],
   "window": {
     "backgroundTextStyle": "black",

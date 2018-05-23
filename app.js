@@ -2,6 +2,7 @@
 App({
   checklist: require('./data/checklist'),
   intro: require('./data/intro'),
+  about: require('./data/about'),
 
   onLaunch: function () {
     // 展示本地存储能力

@@ -4,11 +4,11 @@ const app = getApp()
 
 Page({
   data: {
-    motto: '了解清单',
+    motto: '关于  "口袋清单"',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    intro: app.intro,
+    about: app.about,
   // poster:'https://y.gtimg.cn/music/photo_new/T002R300x300M000001mTkmb4GJlh4.jpg',
   // name: '光年之外',
   // author: '邓紫棋',

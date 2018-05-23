@@ -47,17 +47,13 @@ Page({
       if(distX <= 0){
         console.log("distX <=0: " + distX)
         txtStyle = "left:0px"
-        titleColor = "color:black"
       }else if(distX > 0){
         console.log("distX >0: " + distX)
         txtStyle = "left:-" + distX + "px"
         if (distX >= delBtnWidth){
           txtStyle = "left:-" + delBtnWidth + "px"
         }
-        titleColor = "color:red"
       }
-
-      console.log("titleColr: " + titleColor)
 
       var index = options.currentTarget.id
       console.log("index: " + index)

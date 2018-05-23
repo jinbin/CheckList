@@ -9,7 +9,7 @@
     <view class="page__hd">
         <view class="summary__title">{{motto}}</view>
         <!-- <audio poster="{{poster}}" name="{{name}}" author="{{author}}" src="{{src}}" id="myAudio" controls loop></audio> -->
-        <block wx:for="{{intro}}" wx:key="id">
+        <block wx:for="{{about}}" wx:key="id">
           <view class="page__desc">{{item}}</view>
         </block>
     </view>
