@@ -35,8 +35,14 @@ Page({
   },
   
   onShareAppMessage: function (options) {
+    var text 
+    if(app.globalData.userInfo){
+      text = app.globalData.userInfo.nickName + " 给你分享了一份实用清单"
+    }else{
+      text = "这份实用的清单请你收好"
+    }
     return {
-      title: "这份实用的清单请你收好",
+      title: text,
       path: "/pages/list/list?id=" + this.data.id
     }
   }
