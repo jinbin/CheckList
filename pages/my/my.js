@@ -30,6 +30,14 @@ Page({
     }
   },
 
+  collect: function (e) {
+    var flag = app.intro[e.currentTarget.id]["collect"]
+    app.intro[e.currentTarget.id]["collect"] = !flag
+    this.setData({
+      intro: app.intro
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
