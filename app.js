@@ -1,7 +1,7 @@
 //app.js
 App({
   checklist: require('./data/checklist'),
-  intro: require('./data/intro'),
+  intro: require('./data/intro').reverse(),
   about: require('./data/about'),
 
   onLaunch: function () {

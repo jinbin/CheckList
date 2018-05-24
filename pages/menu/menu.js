@@ -15,10 +15,11 @@ Page({
   },
 
   onShow: function(options) {
-    try {
-      var value = wx.getStorageSync('config')
+      var value = wx.getStorageSync('config') || {"collect": []}
+      console.log("onShow: " + app.intro.length)
       for (var i = 0; i < value["collect"].length; i++) {
-        app.intro[value["collect"][i]]['collect'] = true
+        var index = app.intro.length - 1 - value["collect"][i]
+        app.intro[index]['collect'] = true
       }
       if (value) {
         this.setData({
@@ -26,9 +27,6 @@ Page({
           config: app.intro
         })
       }
-    } catch (e) {
-      console.log("ERROR IN getStorageSync")
-    }
   },
 
   touchS: function(options){
@@ -42,14 +40,14 @@ Page({
   },
 
   collect: function(e) {
-    var value = wx.getStorageSync('config')
+    var value = wx.getStorageSync('config') || {"collect": [] }
 
     if (value) {
       //如果已经有这个元素，则删除；若没有，则添加
       var is_exist = -1
       for (var i = 0; i < value["collect"].length; i++) {
-        if (value["collect"][i] == e.currentTarget.id) {
-          console.log("IS_EXIST!")
+        var index = app.intro.length - 1 - value["collect"][i]
+        if (index == e.currentTarget.id) {
           is_exist = i
         }
       }
@@ -59,7 +57,7 @@ Page({
         value["collect"].splice(is_exist, 1);
         app.intro[e.currentTarget.id]['collect'] = false
       } else { //不在收藏名单，操作：收藏
-        value["collect"].push(e.currentTarget.id)
+        value["collect"].push(app.intro.length - 1 - e.currentTarget.id)
         app.intro[e.currentTarget.id]['collect'] = true
       }
 

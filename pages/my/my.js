@@ -39,9 +39,9 @@ Page({
         //如果已经有这个元素，则删除；若没有，则添加
         var is_exist = -1
         for (var i = 0; i < value["collect"].length; i++) {
-          if (value["collect"][i] == e.currentTarget.id){
-            console.log("IS_EXIST!")
-            is_exist = i 
+          var index = app.intro.length - 1 - value["collect"][i]
+          if (index == e.currentTarget.id){
+            is_exist = i
           }
         }
 
@@ -50,7 +50,7 @@ Page({
           value["collect"].splice(is_exist, 1);
           app.intro[e.currentTarget.id]['collect'] = false
         }else{ //不在收藏名单，操作：收藏
-          value["collect"].push(e.currentTarget.id)
+          value["collect"].push(app.intro.length - 1 - e.currentTarget.id)
           app.intro[e.currentTarget.id]['collect'] = true 
         }
 
@@ -83,7 +83,6 @@ Page({
    * 当在menu页发生收藏更改，收藏夹页必须在加载时重新赋值，保证更改生效
    */
   onShow: function () {
-    try {
       var value = wx.getStorageSync('config')
       if (value["collect"].length == 0){
         this.setData({
@@ -94,8 +93,10 @@ Page({
           showTips: false
         })
       }
+
       for (var i = 0; i < value["collect"].length; i++) {
-        app.intro[value["collect"][i]]['collect'] = true
+        var index = app.intro.length - 1 - value["collect"][i]
+        app.intro[index]['collect'] = true
       }
       if (value) {
         this.setData({
@@ -103,9 +104,6 @@ Page({
           config: app.intro
         })
       }
-    } catch (e) {
-      console.log("ERROR IN getStorageSync")
-    }
   },
 
   /**
