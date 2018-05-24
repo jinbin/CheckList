@@ -11,16 +11,37 @@ Page({
     heart_image_path: false
   },
 
-  onShow: function(options) {
-    var list = this.data.intro
-
-    for (var i = 0; i < list.length; i++) {
-      list[i].txtStyle = "left:0px"
+  onLoad: function(options){
+    try {
+      var value = wx.getStorageSync('intro')
+      console.log("VALUE: " + value)
+      if (value) {
+        this.setData({
+          intro: value
+        })
+      }else{
+        wx.setStorage({
+          key: "intro",
+          data: app.intro
+        })
+      }
+    } catch (e) {
+      console.log("ERROR IN getStorageSync")
     }
+  },
 
-    this.setData({
-      intro: list
-    });
+  onShow: function(options) {
+    try {
+      var value = wx.getStorageSync('intro')
+      console.log("VALUE: " + value)
+      if (value) {
+        this.setData({
+          intro: value
+        })
+      }
+    } catch (e) {
+      console.log("ERROR IN getStorageSync")
+    }
   },
 
   touchS: function(options){
@@ -34,11 +55,24 @@ Page({
   },
 
   collect: function(e) {
-    var flag = app.intro[e.currentTarget.id]["collect"]
-    app.intro[e.currentTarget.id]["collect"] = !flag
-    this.setData({
-      intro: app.intro
-    })
+    try {
+      var value = wx.getStorageSync('intro')
+      console.log("VALUE: " + value)
+      if (value) {
+        var flag = value[e.currentTarget.id]["collect"]
+        console.log("FLAG: " + flag)
+        value[e.currentTarget.id]["collect"] = !flag
+        this.setData({
+          intro: value
+        })
+        wx.setStorage({
+          key: "intro",
+          data: value
+        })
+      }
+    } catch (e) {
+      console.log("ERROR IN getStorageSync")
+    }
   },
 
   touchM: function(options){

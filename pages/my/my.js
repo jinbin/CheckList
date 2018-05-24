@@ -31,18 +31,29 @@ Page({
   },
 
   collect: function (e) {
-    var flag = app.intro[e.currentTarget.id]["collect"]
-    app.intro[e.currentTarget.id]["collect"] = !flag
-    this.setData({
-      intro: app.intro
-    })
+    try {
+      var value = wx.getStorageSync('intro')
+      console.log("VALUE IN MY: " + value)
+      if (value) {
+        var flag = value[e.currentTarget.id]["collect"]
+        value[e.currentTarget.id]["collect"] = !flag
+        this.setData({
+          intro: value
+        })
+        wx.setStorage({
+          key: "intro",
+          data: value
+        })
+      }
+    } catch (e) {
+      console.log("ERROR IN getStorageSync")
+    }
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
   },
 
   /**
@@ -57,9 +68,17 @@ Page({
    * 当在menu页发生收藏更改，收藏夹页必须在加载时重新赋值，保证更改生效
    */
   onShow: function () {
-    this.setData({
-      intro: app.intro
-    })
+    try {
+      var value = wx.getStorageSync('intro')
+      console.log("VALUE IN MY: " + value)
+      if (value) {
+        this.setData({
+          intro: value
+        })
+      }
+    } catch (e) {
+      console.log("ERROR IN getStorageSync")
+    }
   },
 
   /**
