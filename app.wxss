@@ -18,6 +18,11 @@
     position:relative;
 }
 
+.page__collect {
+    width: 20px;
+    height: 20px;
+}
+
 page{
     background-color: #F8F8F8;
     font-size: 16px;

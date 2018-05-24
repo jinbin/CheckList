@@ -6,7 +6,9 @@ Page({
   /**
    * 页面的初始数据
    */
-  data: {},
+  data: {
+    intro: app.intro,
+  },
 
   getUserInfo: function(e) {
     if (!app.globalData.hasUserInfo){

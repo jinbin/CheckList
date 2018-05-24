@@ -7,12 +7,11 @@ Page({
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    intro: app.intro
+    intro: app.intro,
+    heart_image_path: false
   },
 
   onShow: function(options) {
-    console.log("onLoad" + JSON.stringify(options))
-
     var list = this.data.intro
 
     for (var i = 0; i < list.length; i++) {
@@ -32,6 +31,14 @@ Page({
         startX: options.touches[0].clientX
       })
     }
+  },
+
+  collect: function(e) {
+    var flag = app.intro[e.currentTarget.id]["collect"]
+    app.intro[e.currentTarget.id]["collect"] = !flag
+    this.setData({
+      intro: app.intro
+    })
   },
 
   touchM: function(options){

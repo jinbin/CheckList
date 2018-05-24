@@ -1,10 +1,20 @@
 <!--menu.wxml-->
 <view class="page">
     <block wx:for="{{intro}}" wx:key="title" wx:for-index="id">
-      <navigator id="{{id}}" url="../list/list?id={{id}}" class="weui-cell weui-cell_access" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
+      
         <view class="page__hd" >
-          <view style="{{item.txtStyle}};{{item.titleColor}}" class="page__title">{{item["title"]}}</view>
-          <view style="{{item.txtStyle}}" class="page__desc">{{item["desc"]}}</view>
+
+          <navigator id="{{id}}" url="../list/list?id={{id}}" class="weui-cell weui-cell_access" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
+          <view class="page__title">{{item["title"]}}</view>
+          </navigator>
+
+          <image id = "{{id}}" class="page__collect" bindtap="collect" width="20px" height="30px" wx:if="{{item['collect']}}" src="../../images/heart.jpg">收藏</image>
+          <image id = "{{id}}" class="page__collect" bindtap="collect" width="20px" height="30px" wx:else src="../../images/white_heart.jpg">收藏</image>
+
+          <navigator id="{{id}}" url="../list/list?id={{id}}" class="weui-cell weui-cell_access" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
+          <view class="page__desc">{{item["desc"]}}</view>
+          </navigator>
+
         </view>
 
         <!-- <view bindtap="delItem" class="posit">
@@ -12,6 +22,6 @@
             <view class="del" data-addressid="{{item.address.ID}}" data-index="{{index}}" catchtap="delAddress">删除</view>
         </view> -->
 
-      </navigator>
+      
     </block>
 </view>
