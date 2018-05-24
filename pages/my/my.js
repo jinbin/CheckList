@@ -8,6 +8,7 @@ Page({
    */
   data: {
     intro: app.intro,
+    motto: "清单标题下的小心心，将其置为❤️",
   },
 
   getUserInfo: function(e) {
@@ -51,7 +52,7 @@ Page({
           value["collect"].push(e.currentTarget.id)
           app.intro[e.currentTarget.id]['collect'] = true 
         }
-        
+
         wx.setStorage({
           key: "config",
           data: value
