@@ -54,9 +54,12 @@ Page({
 
   /**
    * 生命周期函数--监听页面显示
+   * 当在menu页发生收藏更改，收藏夹页必须在加载时重新赋值，保证更改生效
    */
   onShow: function () {
-  
+    this.setData({
+      intro: app.intro
+    })
   },
 
   /**
