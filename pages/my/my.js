@@ -31,22 +31,36 @@ Page({
   },
 
   collect: function (e) {
-    try {
-      var value = wx.getStorageSync('intro')
+      var value = wx.getStorageSync('config')
+
       if (value) {
-        var flag = value[e.currentTarget.id]["collect"]
-        value[e.currentTarget.id]["collect"] = !flag
-        this.setData({
-          intro: value
-        })
+        //如果已经有这个元素，则删除；若没有，则添加
+        var is_exist = -1
+        for (var i = 0; i < value["collect"].length; i++) {
+          if (value["collect"][i] == e.currentTarget.id){
+            console.log("IS_EXIST!")
+            is_exist = i 
+          }
+        }
+
+        // 在收藏名单，操作：取消收藏
+        if(is_exist != -1){
+          value["collect"].splice(is_exist, 1);
+          app.intro[e.currentTarget.id]['collect'] = false
+        }else{ //不在收藏名单，操作：收藏
+          value["collect"].push(e.currentTarget.id)
+          app.intro[e.currentTarget.id]['collect'] = true 
+        }
+        
         wx.setStorage({
-          key: "intro",
+          key: "config",
           data: value
         })
+
+        this.setData({
+          intro: app.intro
+        })
       }
-    } catch (e) {
-      console.log("ERROR IN getStorageSync")
-    }
   },
 
   /**
@@ -68,10 +82,14 @@ Page({
    */
   onShow: function () {
     try {
-      var value = wx.getStorageSync('intro')
+      var value = wx.getStorageSync('config')
+      for (var i = 0; i < value["collect"].length; i++) {
+        app.intro[value["collect"][i]]['collect'] = true
+      }
       if (value) {
         this.setData({
-          intro: value
+          intro: app.intro,
+          config: app.intro
         })
       }
     } catch (e) {
