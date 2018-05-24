@@ -57,10 +57,8 @@ Page({
   collect: function(e) {
     try {
       var value = wx.getStorageSync('intro')
-      console.log("VALUE: " + value)
       if (value) {
         var flag = value[e.currentTarget.id]["collect"]
-        console.log("FLAG: " + flag)
         value[e.currentTarget.id]["collect"] = !flag
         this.setData({
           intro: value

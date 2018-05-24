@@ -33,7 +33,6 @@ Page({
   collect: function (e) {
     try {
       var value = wx.getStorageSync('intro')
-      console.log("VALUE IN MY: " + value)
       if (value) {
         var flag = value[e.currentTarget.id]["collect"]
         value[e.currentTarget.id]["collect"] = !flag
@@ -70,7 +69,6 @@ Page({
   onShow: function () {
     try {
       var value = wx.getStorageSync('intro')
-      console.log("VALUE IN MY: " + value)
       if (value) {
         this.setData({
           intro: value
