@@ -1,6 +1,6 @@
 <!--pages/my/my.wxml-->
 
-<view wx:if="{{!hasUserInfo}}" class="container">
+<!-- <view wx:if="{{!hasUserInfo}}" class="container">
   <view class="container">
     <button open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 点击开启你的收藏夹 </button>
   </view> 
@@ -8,15 +8,25 @@
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
-</view>
+</view> -->
 
-<view wx:if="{{hasUserInfo}}" class="userinfo-section">
+<!-- <view wx:if="{{hasUserInfo}}" class="userinfo-section">
   <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
   <text class="userinfo-nickname">Hi, {{userInfo.nickName}}</text>
-</view> 
+</view>  -->
+
+<view wx:if="{{showTips}}" class="container">
+    <navigator url="/pages/menu/menu" open-type="switchTab" class="weui-cell weui-cell_access">
+    <button class="middle__desc">返回清单广场收藏清单</button>
+  </navigator> 
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+</view>
+
 
 <!--menu.wxml-->
-<view wx:if="{{hasUserInfo}}" class="page">
+<view wx:if="{{!showTips}}" class="page">
     <block wx:for="{{intro}}" wx:key="title" wx:for-index="id">
       
         <view wx:if="{{item['collect']}}" class="page__hd" >
@@ -32,13 +42,6 @@
           </navigator>
 
         </view>
-
-        <!-- <view bindtap="delItem" class="posit">
-            <view class="editor" data-addressid="{{item.address.ID}}" catchtap="setDefaultAddress">设为默认地址</view>
-            <view class="del" data-addressid="{{item.address.ID}}" data-index="{{index}}" catchtap="delAddress">删除</view>
-        </view> -->
-
-      
     </block>
 </view>
 

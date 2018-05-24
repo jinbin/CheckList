@@ -62,7 +62,7 @@ Page({
         value["collect"].push(e.currentTarget.id)
         app.intro[e.currentTarget.id]['collect'] = true
       }
-      
+
       wx.setStorage({
         key: "config",
         data: value

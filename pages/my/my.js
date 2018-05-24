@@ -8,7 +8,8 @@ Page({
    */
   data: {
     intro: app.intro,
-    motto: "清单标题下的小心心，将其置为❤️",
+    motto: "点击清单标题下的小心心，将其置为❤️",
+    showTips: false
   },
 
   getUserInfo: function(e) {
@@ -84,6 +85,15 @@ Page({
   onShow: function () {
     try {
       var value = wx.getStorageSync('config')
+      if (value["collect"].length == 0){
+        this.setData({
+          showTips: true
+        })
+      }else{
+        this.setData({
+          showTips: false
+        })
+      }
       for (var i = 0; i < value["collect"].length; i++) {
         app.intro[value["collect"][i]]['collect'] = true
       }
