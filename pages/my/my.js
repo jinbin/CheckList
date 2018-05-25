@@ -26,8 +26,8 @@ Page({
       //   icon: '../../images/find-selected.png',
       // },
       {
-        title: '高级设置',
-        remark: '高级设置',
+        title: '设置',
+        remark: '设置',
         url: '/pages/settings/settings',
         icon: '../../images/find-selected.png',
       }

@@ -17,7 +17,8 @@ Page({
       id: options.id,
       list: app.checklist[app.intro[options.id]['title']],
       intro: app.intro[options.id]['desc'],
-      motto: app.intro[options.id]['title']
+      motto: app.intro[options.id]['title'],
+      opened: app.globalData.opened
     })
 
     //判断id是否在config["collect"]中

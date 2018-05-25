@@ -3,12 +3,21 @@ App({
   checklist: require('./data/checklist'),
   intro: require('./data/intro').reverse(),
   about: require('./data/about'),
+  config: require('./config/config'),
 
   onLaunch: function () {
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs)
+
+    var value = wx.getStorageSync('settings') || this.config
+    //默认打赏入口打开
+    if (value["settings"]["opened"] == false) {
+      this.globalData.opened = false
+    } else {
+      this.globalData.opened = true
+    }
 
     // 登录
     wx.login({

@@ -3,7 +3,19 @@
  <view class="page">
     <view class="page__hd">
         <view class="summary__title">高级设置</view>
-          <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n丰富功能敬请期待</view>
+    </view>
+
+    <view class="page">
+      <view class="page__bd">
+        <view class="weui-cells weui-cells_after-title">
+          <view class="weui-cell weui-cell_switch">
+            <view class="weui-cell__bd">开启打赏</view>
+              <view class="weui-cell__ft">
+                <switch bindchange="switchChange" checked="{{ opened }}" />
+              </view>
+            </view>
+          </view>
+        </view>
     </view>
 </view> 
 

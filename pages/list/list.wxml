@@ -36,6 +36,6 @@
 
   <navigator url="/pages/menu/menu" open-type="switchTab" class="weui-cell weui-cell_access">
     <button class="middle__desc">清单广场</button>
-    <image src="../../images/打赏.png" style='width:30px;height:30px'></image>
+    <image wx:if="{{opened}}" src="../../images/打赏.png" style='width:30px;height:30px'></image>
   </navigator> 
 </view>
