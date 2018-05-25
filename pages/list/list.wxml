@@ -1,11 +1,19 @@
 <!--list.wxml-->
 <view class="page">
-  <navigator url="/pages/menu/menu" open-type="switchTab" class="weui-cell weui-cell_access">
+  
     <view class="page__hd">
+      <navigator url="/pages/menu/menu" open-type="switchTab">
         <view class="page__title">{{motto}}</view>
         <view class="page__desc">{{intro}}</view>
+      </navigator>
+
+        <image id = "{{id}}" wx:if="{{isCollect}}" bindtap="collect" style="width: 20px; height: 20px; float:right" src="../../images/heart.jpg">收藏</image>
+        <image id = "{{id}}" wx:else bindtap="collect" style="width: 20px; height: 20px; float:right" wx:else src="../../images/white_heart.jpg">收藏</image>
+
     </view>
-  </navigator>
+  
+
+  
 
     <view class="page__bd page__bd_spacing">
         <view class="kind-list">
