@@ -1,0 +1,18 @@
+<!--pages/contact/contact.wxml-->
+ <view class="page">
+    <view class="page__hd">
+        <view class="summary__title">{{motto}}</view>
+        <!-- <block wx:for="{{contact}}" wx:key="id"> -->
+          <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n合作及建议请联系, 加好友请备注:</view>
+          <view class="page__desc">
+          \r\n\r\n\r\n\r\n\r\n\r\n\r\n微信号: just_as_always
+          【<p bindtap='copyText' style="color:#00BFFF">复制</p>】
+          </view>
+          <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n邮箱: bin.jinb@qq.com</view>
+        <!-- </block> -->
+    </view>
+</view> 
+
+<view class="contact_view">
+  <contact-button type="default-light" size="20" session-from="about"></contact-button>
+</view>

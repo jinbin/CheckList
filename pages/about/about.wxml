@@ -1,9 +1,9 @@
 <!--about.wxml-->
 
-<view wx:if="{{hasUserInfo}}" class="userinfo-section">
+<!-- <view wx:if="{{hasUserInfo}}" class="userinfo-section">
   <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}"></image>
   <text class="userinfo-nickname">Hi, {{userInfo.nickName}}</text>
-</view>
+</view> -->
 
  <view class="page">
     <view class="page__hd">

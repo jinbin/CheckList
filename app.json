@@ -1,9 +1,12 @@
 {
   "pages": [
     "pages/menu/menu",
+    "pages/my/my",
     "pages/about/about",
     "pages/collect/collect",
-    "pages/list/list"
+    "pages/list/list",
+    "pages/contact/contact",
+    "pages/settings/settings"
   ],
   "window": {
     "backgroundTextStyle": "black",
@@ -23,13 +26,13 @@
         "pagePath": "pages/collect/collect",
         "iconPath": "./images/account.png",
         "selectedIconPath": "images/account-selected.png",
-        "text": "收藏夹"        
+        "text": "收藏夹"
       },
       {
-        "pagePath": "pages/about/about",
+        "pagePath": "pages/my/my",
         "iconPath": "./images/find.png",
         "selectedIconPath": "images/find-selected.png",
-        "text": "了解清单"
+        "text": "我的"
       }
     ]
   },
