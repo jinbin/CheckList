@@ -31,13 +31,13 @@
       
         <view wx:if="{{item['collect']}}" class="page__hd" >
 
-          <navigator id="{{id}}" url="../list/list?id={{id}}" class="weui-cell weui-cell_access" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
+          <navigator id="{{id}}" url="../list/list?id={{id}}"  bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
           <view class="page__title">{{item["title"]}}</view>
           </navigator>
 
           <image id = "{{id}}" class="page__collect" bindtap="collect" width="20px" height="30px" wx:if="{{item['collect']}}" src="../../images/heart.jpg">收藏</image>
 
-          <navigator id="{{id}}" url="../list/list?id={{id}}" class="weui-cell weui-cell_access" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
+          <navigator id="{{id}}" url="../list/list?id={{id}}"  bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
           <view class="page__desc">{{item["desc"]}}</view>
           </navigator>
 

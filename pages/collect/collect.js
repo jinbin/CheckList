@@ -83,7 +83,7 @@ Page({
    * 当在menu页发生收藏更改，收藏夹页必须在加载时重新赋值，保证更改生效
    */
   onShow: function () {
-      var value = wx.getStorageSync('config')
+      var value = wx.getStorageSync('config') || app.config
       if (value["collect"].length == 0){
         this.setData({
           showTips: true

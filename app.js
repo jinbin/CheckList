@@ -6,11 +6,6 @@ App({
   config: require('./config/config'),
 
   onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
     var value = wx.getStorageSync('settings') || this.config
     //默认打赏入口打开
     if (value["settings"]["opened"] == false) {
