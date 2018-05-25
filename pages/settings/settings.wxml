@@ -2,7 +2,7 @@
 <!--pages/contact/contact.wxml-->
  <view class="page">
     <view class="page__hd">
-        <view class="summary__title">高级设置</view>
+        <view class="summary__title">设置</view>
     </view>
 
     <view class="page">

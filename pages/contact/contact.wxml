@@ -6,9 +6,12 @@
           <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n合作及建议请联系, 加好友请备注:</view>
           <view class="page__desc">
           \r\n\r\n\r\n\r\n\r\n\r\n\r\n微信号: just_as_always
-          【<p bindtap='copyText' style="color:#00BFFF">复制</p>】
+          【<p bindtap='copyText' data-text="just_as_always" style="color:#00BFFF">复制</p>】
           </view>
-          <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n邮箱: bin.jinb@qq.com</view>
+          <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n邮箱: bin.jinb@qq.com
+          【<p bindtap='copyText' data-text="bin.jinb@qq.com"
+style="color:#00BFFF">复制</p>】
+          </view>
         <!-- </block> -->
     </view>
 </view> 

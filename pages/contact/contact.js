@@ -34,9 +34,8 @@ Page({
   },
 
   copyText: function(e) {
-    console.log(e)
     wx.setClipboardData({
-      data: "just_as_always",
+      data: e.currentTarget.dataset.text,
       success: function(res){
         wx.showToast({
           title: "内容已复制"
@@ -44,7 +43,7 @@ Page({
       }
     })
   },
-
+  
   /**
    * 页面上拉触底事件的处理函数
    */
