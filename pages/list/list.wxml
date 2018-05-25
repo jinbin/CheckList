@@ -9,7 +9,6 @@
 
         <image id = "{{id}}" wx:if="{{isCollect}}" bindtap="collect" style="width: 20px; height: 20px; float:right" src="../../images/heart.jpg">收藏</image>
         <image id = "{{id}}" wx:else bindtap="collect" style="width: 20px; height: 20px; float:right" wx:else src="../../images/white_heart.jpg">收藏</image>
-
     </view>
   
 
@@ -37,5 +36,6 @@
 
   <navigator url="/pages/menu/menu" open-type="switchTab" class="weui-cell weui-cell_access">
     <button class="middle__desc">清单广场</button>
+    <image src="../../images/打赏.png" style='width:30px;height:30px'></image>
   </navigator> 
 </view>
