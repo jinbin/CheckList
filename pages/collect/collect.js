@@ -1,4 +1,4 @@
-// pages/my/my.js
+// pages/collect/collect.js
 const app = getApp()
 
 Page({

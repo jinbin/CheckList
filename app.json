@@ -2,7 +2,7 @@
   "pages": [
     "pages/menu/menu",
     "pages/about/about",
-    "pages/my/my",
+    "pages/collect/collect",
     "pages/list/list"
   ],
   "window": {
@@ -20,7 +20,7 @@
         "text": "清单广场"
       },
       {
-        "pagePath": "pages/my/my",
+        "pagePath": "pages/collect/collect",
         "iconPath": "./images/account.png",
         "selectedIconPath": "images/account-selected.png",
         "text": "收藏夹"        
