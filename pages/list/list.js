@@ -43,7 +43,7 @@ Page({
     for (var i = 0; i < value["collect"].length; i++) {
       var index = app.intro.length - 1 - value["collect"][i]
       //app.intro[index]['collect'] = true
-      if(index == options.id){
+      if (index == id_value){
         this.setData({
           isCollect: true
         })
