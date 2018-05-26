@@ -8,6 +8,14 @@ Page({
   
   },
 
+  imgPre: function(e){
+    var current = e.currentTarget.dataset.src
+    wx.previewImage({
+      current: current, // 当前显示图片的http链接  
+      urls: ["https://raw.githubusercontent.com/jinbin/CheckList/master/images/geizan.png"], // 需要预览的图片http链接列表
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
