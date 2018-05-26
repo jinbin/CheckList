@@ -1,37 +1,11 @@
-// pages/my/my.js
+// pages/reward/reward.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    components: [
-      {
-        title: '收藏夹',
-        remark: '收藏夹',
-        url: '/pages/collect/collect',
-        icon: '../../images/find-selected.png',
-        isTab: true 
-      },
-      {
-        title: '联系作者',
-        remark: '联系作者',
-        url: '/pages/contact/contact',
-        icon: '../../images/find-selected.png',
-      },
-      {
-        title: '设置',
-        remark: '设置',
-        url: '/pages/settings/settings',
-        icon: '../../images/find-selected.png',
-      },
-      {
-        title: '打赏开发者',
-        remark: '打赏开发者',
-        url: '/pages/reward/reward',
-        icon: '../../images/find-selected.png',
-      },
-    ]
+  
   },
 
   /**
