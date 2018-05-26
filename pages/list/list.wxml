@@ -37,14 +37,23 @@
 <view class="container">
   <view class="userinfo">
   <navigator url="/pages/menu/menu" open-type="switchTab">
-    <button style="color:green;font-size:16px;">清单广场</button>
+    <button style="color:#CD5C5C;font-size:16px;">清单广场            </button>
   </navigator>
   </view>
   <view class="userinfo">
   <navigator url="/pages/reward/reward" style="float:right">
-    <image wx:if="{{opened}}" src="../../images/打赏.png" style='width:28px;height:28px;'></image>
+    <!-- <image wx:if="{{opened}}" src="../../images/打赏.png" style='width:28px;height:28px;'></image> -->
+    <button wx:if="{{opened}}" style="color:#CD5C5C;font-size:16px;">
+     <image wx:if="{{opened}}" src="../../images/打赏.png" style='width:15px;height:15px;'></image> 
+    我要打赏              
+    </button>
   </navigator>
   </view> 
+  <view class="userinfo">
+  <navigator url="/pages/comment/comment?id={{id}}">
+    <button style="color:#CD5C5C;font-size:16px;">评论区              </button>
+  </navigator>
+  </view>
 </view>
 
 </view>
