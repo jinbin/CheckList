@@ -1,0 +1,52 @@
+  "": [
+    {
+      id: 1,
+      name: '',
+      open: false,
+    },
+    {
+      id: 2,
+      name: '',
+      open: false,
+    },
+    {
+      id: 3,
+      name: '',
+      open: false,
+    },
+    {
+      id: 4,
+      name: '',
+      open: false,
+    },
+    {
+      id: 5,
+      name: '',
+      open: false,
+    },
+    {
+      id: 6,
+      name: '',
+      open: false,
+    },
+    {
+      id: 7,
+      name: '',
+      open: false,
+    },
+    {
+      id: 8,
+      name: '',
+      open: false,
+    },
+    {
+      id: 9,
+      name: '',
+      open: false,
+    },
+    {
+      id: 10,
+      name: '',
+      open: false,
+    },
+  ]
