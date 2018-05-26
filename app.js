@@ -3,6 +3,7 @@ App({
   checklist: require('./data/checklist'),
   intro: require('./data/intro').reverse(),
   about: require('./data/about'),
+  aboutkoudai: require('./data/aboutkoudai'),
   config: require('./config/config'),
 
   onLaunch: function () {

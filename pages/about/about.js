@@ -4,15 +4,32 @@ const app = getApp()
 
 Page({
   data: {
-    motto: '了解清单',
+    //motto: '了解清单',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo'),
-    about: app.about,
+    //about: app.about,
   // poster:'https://y.gtimg.cn/music/photo_new/T002R300x300M000001mTkmb4GJlh4.jpg',
   // name: '光年之外',
   // author: '邓紫棋',
   // src: "https://ws.stream.qqmusic.qq.com/200255722.m4a?fromtag=46",
+  },
+
+  onLoad: function(options){
+    if(options.key == "about"){
+      this.setData({
+        motto:'了解清单',
+        about: app.about
+      })
+    }else if(options.key == "aboutkoudai"){
+      this.setData({
+        motto: '关于口袋清单',
+        about: app.aboutkoudai
+      })
+    }else {
+      console.log("其他key")
+      console.log(options)
+    }
   },
 
   //onShow每次打开页面都会进行判断

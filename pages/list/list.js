@@ -13,11 +13,27 @@ Page({
   },
 
   onLoad: function(options){
+    var content
+    var id_value 
+    var identity_value
+    if(options.id){
+      content = app.checklist[app.intro[options.id]['title']]
+      id_value = options.id
+      identity_value = app.intro.length - 1 - options.id
+    } else if (options.identity){
+      content = app.checklist[app.intro[options.identity]['title']]
+      id_value = app.intro.length - 1 - options.identity
+      identity_value = options.identity
+    }else{
+      console.log("id 和 identity都不存在")
+      console.log(options)
+    }
     this.setData({
-      id: options.id,
-      list: app.checklist[app.intro[options.id]['title']],
-      intro: app.intro[options.id]['desc'],
-      motto: app.intro[options.id]['title'],
+      id: id_value,
+      identity: identity_value,
+      list: content,
+      intro: app.intro[id_value]['desc'],
+      motto: app.intro[id_value]['title'],
       opened: app.globalData.opened
     })
 
@@ -91,7 +107,7 @@ Page({
     }
     return {
       title: text,
-      path: "/pages/list/list?id=" + this.data.id
+      path: "/pages/list/list?identity=" + this.data.identity
     }
   }
 

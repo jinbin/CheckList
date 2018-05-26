@@ -1,1 +1,5 @@
 /* pages/my/my.wxss */
+
+.page__hd {
+    padding: 10px;
+}
