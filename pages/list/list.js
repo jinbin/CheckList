@@ -1,6 +1,7 @@
 //list.js
 //获取应用实例
 const app = getApp()
+var g = "name"
 
 Page({
   data: {
@@ -16,18 +17,20 @@ Page({
     var content
     var id_value 
     var identity_value
+
     if(options.id){
       content = app.checklist[app.intro[options.id]['title']]
       id_value = options.id
       identity_value = app.intro.length - 1 - options.id
     } else if (options.identity){
-      content = app.checklist[app.intro[options.identity]['title']]
       id_value = app.intro.length - 1 - options.identity
       identity_value = options.identity
+      content = app.checklist[app.intro[id_value]['title']]
     }else{
       console.log("id 和 identity都不存在")
       console.log(options)
     }
+
     this.setData({
       id: id_value,
       identity: identity_value,
