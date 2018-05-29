@@ -113,5 +113,4 @@ Page({
       path: "/pages/list/list?identity=" + this.data.identity
     }
   }
-
 })
