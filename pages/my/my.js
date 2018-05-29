@@ -6,13 +6,13 @@ Page({
    */
   data: {
     components: [
-      {
-        title: '收藏夹',
-        remark: '收藏夹',
-        url: '/pages/collect/collect',
-        icon: '../../images/find-selected.png',
-        isTab: true 
-      },
+      // {
+      //   title: '收藏夹',
+      //   remark: '收藏夹',
+      //   url: '/pages/collect/collect',
+      //   icon: '../../images/find-selected.png',
+      //   isTab: true 
+      // },
       {
         title: '联系作者',
         remark: '联系作者',
@@ -23,6 +23,12 @@ Page({
         title: '设置',
         remark: '设置',
         url: '/pages/settings/settings',
+        icon: '../../images/find-selected.png',
+      },
+      {
+        title: '微信公众号',
+        remark: '微信公众号',
+        url: '/pages/my/officialAccount/offcialAccount',
         icon: '../../images/find-selected.png',
       },
       {

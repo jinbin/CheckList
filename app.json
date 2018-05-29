@@ -8,7 +8,8 @@
     "pages/contact/contact",
     "pages/settings/settings",
     "pages/reward/reward",
-    "pages/comment/comment"
+    "pages/comment/comment",
+    "pages/my/officialAccount/offcialAccount"
   ],
   "window": {
     "backgroundTextStyle": "black",

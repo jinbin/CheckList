@@ -1,4 +1,4 @@
-// pages/reward/reward.js
+// pages/my/officialAccount/offcialAccount.js
 Page({
 
   /**
@@ -8,11 +8,11 @@ Page({
   
   },
 
-  imgPre: function(e){
+  imgPre: function (e) {
     var current = e.currentTarget.dataset.src
     wx.previewImage({
       current: current, // 当前显示图片的http链接  
-      urls: ["https://mmbiz.qpic.cn/mmbiz_jpg/YoMN6iaCZsaHibVXT0JtCibbepl7pBvcncFKtevrThKSP9Q2PXe6qkH7hyctbiaVMQiabryicm3wyukQxMV3NWElhxQg/0?wx_fmt=jpeg"], // 需要预览的图片http链接列表
+      urls: ["https://mmbiz.qpic.cn/mmbiz_png/YoMN6iaCZsaFlFn23mVOtjka1X8klticQ3czLFDcPibQbVHibR3sCvnk84icOwUBX3yTxiaib5WHsaacEBJX88iasv4vyQ/0?wx_fmt=png"], // 需要预览的图片http链接列表
     })
   },
 

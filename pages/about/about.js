@@ -2,6 +2,8 @@
 //获取应用实例
 const app = getApp()
 
+var key
+
 Page({
   data: {
     //motto: '了解清单',
@@ -21,11 +23,13 @@ Page({
         motto:'了解清单',
         about: app.about
       })
+      key = "about"
     }else if(options.key == "aboutkoudai"){
       this.setData({
         motto: '关于口袋清单',
         about: app.aboutkoudai
       })
+      key = "aboutkoudai"
     }else {
       console.log("其他key")
       console.log(options)
@@ -49,9 +53,16 @@ Page({
   },
 
   onShareAppMessage: function (options) {
-    return {
-      title: "告诉你什么是清单",
-      path: "/pages/about/about"
+    if (key == "about") {
+      return {
+        title: "告诉你什么是清单",
+        path: "/pages/about/about?key=about"
+      }
+    } else if(key == "aboutkoudai") {
+      return {
+        title: "口袋清单是什么?",
+        path: "/pages/about/about?key=aboutkoudai"
+      }
     }
   }
 })

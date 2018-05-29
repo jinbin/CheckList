@@ -1,0 +1,7 @@
+<!--pages/my/officialAccount/offcialAccount.wxml-->
+<view class="container">
+  <view class="userinfo">
+      <image bindtap="imgPre" data-src="/images/officialAccount.png" style="width: 350px; height: 430px" src="/images/officialAccount.png"></image>
+      <view style="text-align:center;font-family:Times;color:#aaa;">* 点击查看大图，保存图片，打开微信扫一扫</view>
+    </view>
+</view>
