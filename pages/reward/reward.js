@@ -12,7 +12,7 @@ Page({
     var current = e.currentTarget.dataset.src
     wx.previewImage({
       current: current, // 当前显示图片的http链接  
-      urls: ["https://mmbiz.qpic.cn/mmbiz_jpg/YoMN6iaCZsaHibVXT0JtCibbepl7pBvcncFKtevrThKSP9Q2PXe6qkH7hyctbiaVMQiabryicm3wyukQxMV3NWElhxQg/0?wx_fmt=jpeg"], // 需要预览的图片http链接列表
+      urls: ["https://mmbiz.qpic.cn/mmbiz_jpg/YoMN6iaCZsaGKqFU9uTCOn2ut3Q0IobzJYwsmsQsB4GGQyburDLo73HyhNDyfoHlBQricVI3ERIACPxA4Sbx8KUw/0?wx_fmt=jpeg"], // 需要预览的图片http链接列表
     })
   },
 
