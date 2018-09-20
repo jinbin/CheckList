@@ -8,6 +8,10 @@
           \r\n\r\n\r\n\r\n\r\n\r\n\r\n微信号: just_as_always
           【<p bindtap='copyText' data-text="just_as_always" style="color:#00BFFF">复制</p>】
           </view>
+          <view class="page__desc">
+          \r\n\r\n\r\n\r\n\r\n\r\n\r\n微信公众号: 可能性工作室
+          【<p bindtap='copyText' data-text="可能性工作室" style="color:#00BFFF">复制</p>】
+          </view>
           <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n邮箱: bin.jinb@qq.com
           【<p bindtap='copyText' data-text="bin.jinb@qq.com"
 style="color:#00BFFF">复制</p>】
