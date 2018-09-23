@@ -14,8 +14,8 @@ Page({
       //   isTab: true 
       // },
       {
-        title: '联系作者',
-        remark: '联系作者',
+        title: '作者介绍',
+        remark: '作者介绍',
         url: '/pages/contact/contact',
         icon: '../../images/find-selected.png',
       },
