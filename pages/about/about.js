@@ -26,7 +26,7 @@ Page({
       key = "about"
     }else if(options.key == "aboutkoudai"){
       this.setData({
-        motto: '关于口袋清单',
+        motto: '清单广场',
         about: app.aboutkoudai
       })
       key = "aboutkoudai"
@@ -60,7 +60,7 @@ Page({
       }
     } else if(key == "aboutkoudai") {
       return {
-        title: "口袋清单是什么?",
+        title: "清单广场是什么?",
         path: "/pages/about/about?key=aboutkoudai"
       }
     }

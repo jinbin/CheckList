@@ -1,5 +1,7 @@
 module.exports = 
 {
   "collect": [],
-  "settings": {}
+  "settings": {
+    "opened":false
+  }
 }

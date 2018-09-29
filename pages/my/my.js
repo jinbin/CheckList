@@ -20,12 +20,6 @@ Page({
         icon: '../../images/find-selected.png',
       },
       {
-        title: '设置',
-        remark: '设置',
-        url: '/pages/settings/settings',
-        icon: '../../images/find-selected.png',
-      },
-      {
         title: '微信公众号',
         remark: '微信公众号',
         url: '/pages/my/officialAccount/offcialAccount',
@@ -37,7 +31,24 @@ Page({
         url: '/pages/reward/reward',
         icon: '../../images/find-selected.png',
       },
+      {
+        title: '设置',
+        remark: '设置',
+        url: '/pages/settings/settings',
+        icon: '../../images/find-selected.png',
+      }
     ]
+  },
+
+  copyText: function (e) {
+    wx.setClipboardData({
+      data: e.currentTarget.dataset.text,
+      success: function (res) {
+        wx.showToast({
+          title: "内容已复制"
+        })
+      }
+    })
   },
 
   /**

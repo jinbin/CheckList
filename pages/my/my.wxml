@@ -1,5 +1,12 @@
 <!--pages/my/my.wxml-->
   <view class="page__hd">
+      <view class="page__title">可能性工作室</view>
+      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n微信公众号"<p bindtap='copyText' data-text="可能性工作室" style="color:#00BFFF">可能性工作室</p>"同名小程序。
+      <!-- <p style="color:#00BFFF">【更多介绍请点击】</p> -->
+      </view>
+  </view>
+
+  <view class="page__hd">
       <view class="page__title">了解清单</view>
       <navigator url="/pages/about/about?key=about">
       <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n使用清单，就是为大脑搭建起一张“认知防护网”，它能够弥补人类与生俱来的认知缺陷，如记忆不完整或注意力不集中。作者在书中提出清单的4大行事原则：权力下放、简单至上、人为根本及持续改善。它们不是僵化的教条，而是实用的支持体系，将在复杂的世界中拯救你的生活。
@@ -9,7 +16,7 @@
   </view>
 
   <view class="page__hd">
-      <view class="page__title">关于口袋清单</view>
+      <view class="page__title">清单广场</view>
       <navigator url="/pages/about/about?key=aboutkoudai">
       <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n清单就是这样的有益约束下的产物。清单提供了一些列的观点，这些观点之间有联系性，而且具有可操作性。口袋清单希望可以收集到足够的优质清单，也有能力产出高质量的清单。
       <p style="color:#00BFFF">【更多介绍请点击】</p>

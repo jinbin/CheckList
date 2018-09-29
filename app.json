@@ -13,8 +13,8 @@
   ],
   "window": {
     "backgroundTextStyle": "black",
-    "navigationBarBackgroundColor": "#CD5C5C",
-    "navigationBarTitleText": "口袋清单",
+    "navigationBarBackgroundColor": "#FF8C00",
+    "navigationBarTitleText": "可能性工作室",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

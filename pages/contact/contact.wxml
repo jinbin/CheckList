@@ -4,8 +4,8 @@
     <view class="page__hd">
         <view class="summary__title">作者介绍</view>
         <!-- <block wx:for="{{contact}}" wx:key="id"> -->
-          <view class="page__desc">
-          \r\n\r\n\r\n\r\n\r\n\r\n\r\n中国科技大学计算机系毕业，前阿里巴巴员工，现互联网电商公司技术专家。
+          <!-- <view class="page__desc">
+          \r\n\r\n\r\n\r\n\r\n\r\n\r\n中国科大计算机系毕业，前阿里巴巴员工，现互联网电商公司技术专家。
           </view>
           <view class="page__desc">
           \r\n\r\n\r\n\r\n\r\n\r\n\r\n独立投资人，10年以上投资经验，在雪球财经社区拥有近万粉丝。
@@ -15,6 +15,9 @@
           </view>
           <view class="page__desc">
           \r\n\r\n\r\n\r\n\r\n\r\n\r\n西子双语演讲俱乐部教育副主席，"胜任领导力"头衔获得者，组织过数十场头马会议。
+          </view> -->
+          <view class="page__desc">
+          \r\n\r\n\r\n\r\n\r\n\r\n\r\n独立投资者，10年以上投资经验 ，在雪球财经社区拥有近万粉丝 / 支付宝蚂蚁财富社区签约入驻作者 / 在个人微信公众号"<p bindtap='copyText' data-text="可能性工作室" style="color:#00BFFF">可能性工作室</p>"发表过上百篇原创文章 / 前阿里巴巴技术专家 / 西子双语演讲俱乐部教育副主席。 文章、思路皆原创，知行合一。 
           </view>
         <!-- </block> -->
     </view>
