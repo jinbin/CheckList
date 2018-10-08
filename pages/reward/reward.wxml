@@ -1,5 +1,4 @@
 <!--pages/reward/reward.wxml-->
-<official-account></official-account>
 <view class="container">
   <view class="userinfo">
       <image bindtap="imgPre" data-src="/images/zanshang.jpeg" style="width: 350px; height: 350px" src="/images/zanshang.jpeg"></image>
