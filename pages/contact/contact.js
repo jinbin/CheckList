@@ -33,6 +33,12 @@ Page({
   
   },
 
+  navToMap: function(e) {
+    wx.navigateTo({
+      url: '/pages/map/map'
+    })
+  },
+
   copyText: function(e) {
     wx.setClipboardData({
       data: e.currentTarget.dataset.text,

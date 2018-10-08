@@ -1,4 +1,5 @@
 <!--menu.wxml-->
+<official-account></official-account>
 <view class="page">
     <block wx:for="{{intro}}" wx:key="title" wx:for-index="id">
       

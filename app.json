@@ -1,5 +1,6 @@
 {
-  "pages": [
+  "pages": [ 
+    
     "pages/menu/menu",
     "pages/my/my",
     "pages/about/about",
@@ -9,7 +10,9 @@
     "pages/settings/settings",
     "pages/reward/reward",
     "pages/comment/comment",
-    "pages/my/officialAccount/offcialAccount"
+    "pages/map/map",
+    "pages/my/officialAccount/offcialAccount"   
+
   ],
   "window": {
     "backgroundTextStyle": "black",
