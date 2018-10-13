@@ -10,7 +10,6 @@
     "pages/settings/settings",
     "pages/reward/reward",
     "pages/comment/comment",
-    "pages/map/map",
     "pages/my/officialAccount/offcialAccount"   
 
   ],
