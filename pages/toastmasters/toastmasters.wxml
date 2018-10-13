@@ -1,0 +1,37 @@
+<!--pages/my/my.wxml-->
+<official-account></official-account>
+  <view class="page__hd">
+      <view class="page__title">西子双语演讲俱乐部</view>
+      <navigator url="/pages/map/map">
+      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+      <p style="color:#00BFFF">西子双语演讲俱乐部</p>
+      </view>
+      </navigator>
+  </view>
+
+  <view class="page__hd">
+      <view class="page__title">时间官</view>
+      <navigator url="/pages/toastmasters/tag/tag?key=timer">
+      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+      <p style="color:#00BFFF">时间官</p>
+      </view>
+      </navigator>
+  </view>
+
+  <view class="page__hd">
+      <view class="page__title">哼哈官</view>
+      <navigator url="/pages/toastmasters/tag/tag?key=ahcounter">
+      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+      <p style="color:#00BFFF">哼哈官</p>
+      </view>
+      </navigator>
+  </view>
+
+  <view class="page__hd">
+      <view class="page__title">语法官</view>
+      <navigator url="/pages/toastmasters/tag/tag?key=grammarian">
+      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+      <p style="color:#00BFFF">语法官</p>
+      </view>
+      </navigator>
+  </view>

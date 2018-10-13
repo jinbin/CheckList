@@ -5,6 +5,7 @@ App({
   about: require('./data/about'),
   aboutkoudai: require('./data/aboutkoudai'),
   config: require('./config/config'),
+  timer: require('./data/timer'),
 
   onLaunch: function () {
     var value = wx.getStorageSync('settings') || this.config

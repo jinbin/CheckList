@@ -1,0 +1,9 @@
+
+        
+<block wx:for="{{timer}}">
+  <text decode="{{true}}" space="{{true}}" class="page__desc">{{item.content}}</text>
+</block> 
+
+<image class="img" src="{{content}}" mode="widthFix"></image>
+
+

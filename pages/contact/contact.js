@@ -36,6 +36,7 @@ Page({
   navToMap: function(e) {
     wx.navigateTo({
       url: '/pages/map/map'
+      //url: '/pages/toastmasters/toastmasters'
     })
   },
 

@@ -11,7 +11,7 @@ Page({
       longitude: 120.1367318630,
       title: '西子双语演讲俱乐部',
       label: { 
-        content: "点击进入导航", 
+        content: "点击进入导航页", 
         color: "#ff0000", 
         fontSize: 25,   
         borderRadius: "10", 

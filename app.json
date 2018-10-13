@@ -11,13 +11,15 @@
     "pages/reward/reward",
     "pages/comment/comment",
     "pages/map/map",
+    "pages/toastmasters/tag/tag",
+    "pages/toastmasters/toastmasters",
     "pages/my/officialAccount/offcialAccount"   
 
   ],
   "window": {
     "backgroundTextStyle": "black",
     "navigationBarBackgroundColor": "#FF8C00",
-    "navigationBarTitleText": "可能性工作室",
+    "navigationBarTitleText": "可能性+",
     "navigationBarTextStyle": "black"
   },
   "tabBar": {

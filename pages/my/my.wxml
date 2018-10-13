@@ -1,7 +1,7 @@
 <!--pages/my/my.wxml-->
 <official-account></official-account>
   <view class="page__hd">
-      <view class="page__title">可能性工作室</view>
+      <view class="page__title">可能性+</view>
       <navigator url="/pages/my/officialAccount/offcialAccount">
       <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n微信公众号"<p style="color:#00BFFF">可能性工作室</p>"同名小程序。
       <!-- <p style="color:#00BFFF">【更多介绍请点击】</p> -->
