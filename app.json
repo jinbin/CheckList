@@ -11,8 +11,6 @@
     "pages/reward/reward",
     "pages/comment/comment",
     "pages/map/map",
-    "pages/toastmasters/tag/tag",
-    "pages/toastmasters/toastmasters",
     "pages/my/officialAccount/offcialAccount"   
 
   ],
