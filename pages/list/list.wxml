@@ -31,6 +31,8 @@
         </view>
     </view>
 
+    <ad unit-id="adunit-a13bd903f2e4a182"></ad>
+
 <view class="container">
   <view class="userinfo">
   <navigator url="/pages/menu/menu" open-type="switchTab">

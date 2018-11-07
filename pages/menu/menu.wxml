@@ -1,6 +1,7 @@
 <!--menu.wxml-->
 <official-account></official-account>
 <view class="page">
+    <ad unit-id="adunit-a13bd903f2e4a182"></ad>
     <block wx:for="{{intro}}" wx:key="title" wx:for-index="id">
       
         <view class="page__hd" >
