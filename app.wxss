@@ -111,3 +111,11 @@ page{
 .mini-btn{
     margin-right: 5px;
 }
+
+.page__ft{
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: #888888;
+}
+

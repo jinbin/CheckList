@@ -2,10 +2,7 @@
 <official-account></official-account>
   <view class="page__hd">
       <view class="page__title">可能性+</view>
-      <navigator url="/pages/contact/contact">
-      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\nPowered by 
-      <p style="color:#00BFFF">可能性工作室</p></view>
-      </navigator>
+      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n这是一款在不断变化，不断拓展可能性的小程序。在这个充满不确定性的世界里，不去追求确定的未来，而是努力拓展未来的可能性。</view>
   </view>
 
     <view class="page__hd">
@@ -50,6 +47,11 @@
       <p style="color:#00BFFF">你</p></view>
       </navigator>
     </view>
+
+    <navigator url="/pages/contact/contact">
+      <view class="page__ft">\r\n\r\n\r\n\r\n\r\n\r\n\r\nPowered by 
+      <p style="color:#00BFFF">可能性工作室</p></view>
+    </navigator>
 
     <view class="page__hd">
       <ad unit-id="adunit-a13bd903f2e4a182"></ad>
