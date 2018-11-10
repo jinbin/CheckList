@@ -1,7 +1,8 @@
 {
-  "pages": [ 
-    
+  "pages": [
     "pages/menu/menu",
+    "pages/tm/clock/set/set",
+    "pages/tm/clock/countdown/countdown", 
     "pages/my/my",
     "pages/about/about",
     "pages/collect/collect",
@@ -10,7 +11,10 @@
     "pages/settings/settings",
     "pages/reward/reward",
     "pages/comment/comment",
-    "pages/my/officialAccount/offcialAccount"   
+    "pages/my/officialAccount/offcialAccount",
+    "pages/my/leftdays/leftdays",
+    "pages/tm/loc/loc",
+    "pages/tm/tm/tm"
 
   ],
   "window": {
@@ -41,5 +45,8 @@
       }
     ]
   },
+  "navigateToMiniProgramAppIdList": [
+    "wx16c76d4762cbe0b3"
+  ],
   "debug": true
 }

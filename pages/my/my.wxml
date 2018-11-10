@@ -2,7 +2,28 @@
 <official-account></official-account>
   <view class="page__hd">
       <view class="page__title">可能性+</view>
+      <navigator url="/pages/contact/contact">
+      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\nPowered by 
+      <p style="color:#00BFFF">可能性工作室</p></view>
+      </navigator>
   </view>
+
+    <view class="page__hd">
+      <view class="page__title">关于头马</view>
+      <navigator url="/pages/tm/loc/loc">
+      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n关于
+      <p style="color:#00BFFF">西子双语演讲俱乐部</p>
+      </view>
+      </navigator>
+      <navigator url="/pages/tm/clock/set/set">
+      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n点击
+      <p style="color:#00BFFF">时间官工具</p>
+      </view>
+      </navigator>
+      <view class="page__desc" bindtap='toMiniProgram'>\r\n\r\n\r\n\r\n\r\n\r\n\r\n点击
+      <p style="color:#00BFFF">头马助手</p>
+      </view>
+    </view>
 
   <view class="page__hd">
       <view class="page__title">了解清单</view>
@@ -13,16 +34,37 @@
       </navigator>
   </view>
 
-  <view class="page__hd">
+    <!-- <view class="page__hd">
+      <view class="page__title">关于你的2018</view>
+      <navigator url="/pages/my/leftdays/leftdays">
+      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n
+        <p style="color:#00BFFF">【点击查看】</p>
+      </view>
+      </navigator>
+    </view> -->
+
+    <view class="page__hd">
+      <view class="page__title">有钱任性</view>
+      <navigator url="/pages/reward/reward">
+      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\nPowered by 
+      <p style="color:#00BFFF">你</p></view>
+      </navigator>
+    </view>
+
+    <view class="page__hd">
+      <ad unit-id="adunit-a13bd903f2e4a182"></ad>
+    </view>
+
+  <!-- <view class="page__hd">
       <view class="page__title">清单广场</view>
       <navigator url="/pages/about/about?key=aboutkoudai">
       <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n清单就是这样的有益约束下的产物。清单提供了一些列的观点，这些观点之间有联系性，而且具有可操作性。口袋清单希望可以收集到足够的优质清单，也有能力产出高质量的清单。
       <p style="color:#00BFFF">【更多介绍请点击】</p>
       </view>
       </navigator>
-  </view>
+  </view> -->
 
-	<view class="page-body">
+	<!-- <view class="page-body">
 		<view class="weui-cells weui-cells_after-title">
 			<block wx:for="{{ components }}" wx:key="">
           <navigator url="{{ item.url }}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" open-type="{{item.isTab ? 'switchTab':'navigate'}}"> 
@@ -34,4 +76,4 @@
 			    </navigator>
 		    </block>
 		</view>
-  </view>
+  </view> -->

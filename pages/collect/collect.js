@@ -94,7 +94,14 @@ Page({
         })
       }
 
+      console.log(value["collect"])
+
       for (var i = 0; i < value["collect"].length; i++) {
+        if (value["collect"][i] > app.intro - 1){
+          console.log(value["collect"][i])
+          console.log(app.intro - 1)
+          continue
+        }
         var index = app.intro.length - 1 - value["collect"][i]
         app.intro[index]['collect'] = true
       }

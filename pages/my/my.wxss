@@ -3,3 +3,7 @@
 .page__hd {
     padding: 10px;
 }
+
+.bottom {
+  position:fixed; bottom:0;
+}

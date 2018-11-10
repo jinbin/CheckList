@@ -13,31 +13,46 @@ Page({
       //   icon: '../../images/find-selected.png',
       //   isTab: true 
       // },
-      {
-        title: '作者介绍',
-        remark: '作者介绍',
-        url: '/pages/contact/contact',
-        icon: '../../images/find-selected.png',
-      },
-      {
-        title: '微信公众号',
-        remark: '微信公众号',
-        url: '/pages/my/officialAccount/offcialAccount',
-        icon: '../../images/find-selected.png',
-      },
-      {
-        title: '打赏开发者',
-        remark: '打赏开发者',
-        url: '/pages/reward/reward',
-        icon: '../../images/find-selected.png',
-      },
+      // {
+      //   title: '联系作者',
+      //   remark: '联系作者',
+      //   url: '/pages/contact/contact',
+      //   icon: '../../images/find-selected.png',
+      // },
+      // {
+      //   title: '公众号',
+      //   remark: '公众号',
+      //   url: '/pages/my/officialAccount/offcialAccount',
+      //   icon: '../../images/find-selected.png',
+      // },
       {
         title: '设置',
         remark: '设置',
         url: '/pages/settings/settings',
         icon: '../../images/find-selected.png',
       }
+      // {
+      //   title: '有钱任性',
+      //   remark: '有钱任性',
+      //   url: '/pages/reward/reward',
+      //   icon: '../../images/find-selected.png',
+      // }
     ]
+  },
+
+  toMiniProgram: function (e) {
+    console.log("toMiniProgram")
+    wx.navigateToMiniProgram({
+      appId: 'wx16c76d4762cbe0b3',
+      path: 'pages/tm/clock/set/set',
+      extraData: {
+        foo: 'bar'
+      },
+      // envVersion: 'trial',
+      success(res) {
+        console.log("SUCCESS")
+      }
+    })
   },
 
   copyText: function (e) {

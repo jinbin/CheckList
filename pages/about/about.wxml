@@ -16,7 +16,9 @@
 </view> 
 
 <view class="contact_view">
+  <navigator url="/pages/my/leftdays/leftdays?title=考研倒计时&content=距离考研&duetime=1545408000">
   <contact-button type="default-light" size="20" session-from="about"></contact-button>
+  </navigator>
 </view>
 
 

@@ -12,6 +12,14 @@ Page({
     contact: app.contact,
   },
 
+  imgPre: function (e) {
+    var current = e.currentTarget.dataset.src
+    wx.previewImage({
+      current: current, // 当前显示图片的http链接  
+      urls: ["https://mmbiz.qpic.cn/mmbiz_png/YoMN6iaCZsaGKqFU9uTCOn2ut3Q0IobzJ4nyiaW8KDibgSU18AOY0u6srSDPB3EGR7LLwhVsQLdNTHXIym6xCiboSA/0?wx_fmt=png"], // 需要预览的图片http链接列表
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
@@ -35,7 +43,7 @@ Page({
 
   navToMap: function(e) {
     wx.navigateTo({
-      url: '/pages/map/map'
+      url: '/pages/tm/loc/loc'
       //url: '/pages/toastmasters/toastmasters'
     })
   },

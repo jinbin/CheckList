@@ -16,21 +16,24 @@
 </view>  -->
 
 <view wx:if="{{showTips}}" class="container">
+     
     <navigator url="/pages/menu/menu" open-type="switchTab" class="weui-cell weui-cell_access">
     <button class="middle__desc">返回清单广场收藏清单</button>
   </navigator> 
   <view class="usermotto">
     <text class="user-motto">{{motto}}</text>
   </view>
+
+  <ad class="bottom" unit-id="adunit-a13bd903f2e4a182"></ad>
+  
 </view>
 
 
 <!--menu.wxml-->
 <view wx:if="{{!showTips}}" class="page">
+    <ad unit-id="adunit-a13bd903f2e4a182"></ad>
     <block wx:for="{{intro}}" wx:key="title" wx:for-index="id">
-      
         <view wx:if="{{item['collect']}}" class="page__hd" >
-
           <navigator id="{{id}}" url="../list/list?id={{id}}"  bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
           <view class="page__title">{{item["title"]}}</view>
           </navigator>

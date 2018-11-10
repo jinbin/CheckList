@@ -1,9 +1,19 @@
 <!--menu.wxml-->
 <official-account></official-account>
 <view class="page">
-    <ad unit-id="adunit-a13bd903f2e4a182"></ad>
     <block wx:for="{{intro}}" wx:key="title" wx:for-index="id">
-      
+        <view wx:if="{{id % 4 == 0}}"> 
+          <ad unit-id="adunit-a13bd903f2e4a182"></ad> 
+        </view>
+        <view wx:if="{{id == 0}}"> 
+          <view class="page__hd" >
+            <navigator url="/pages/my/leftdays/leftdays">
+              <button class="page__title">
+              2018倒计时⏳
+              </button>
+            </navigator>
+          </view>
+        </view>
         <view class="page__hd" >
 
           <navigator id="{{id}}" url="../list/list?id={{id}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
@@ -15,7 +25,7 @@
 
           <navigator id="{{id}}" url="../list/list?id={{id}}" bindtouchstart="touchS" bindtouchmove="touchM" bindtouchend="touchE" >
           <view class="page__desc">{{item["desc"]}}</view>
-          </navigator>
+          </navigator>  
 
         </view>
 

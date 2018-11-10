@@ -9,3 +9,7 @@
 .usermotto {
   margin-top: 100px;
 }
+
+.bottom {
+  position:fixed; bottom:0;
+}

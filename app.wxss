@@ -27,6 +27,7 @@
 }
 
 page{
+    /* height: 100%; */
     background-color: #F8F8F8;
     font-size: 16px;
     font-family: -apple-system-font,Helvetica Neue,Helvetica,sans-serif;
@@ -100,4 +101,13 @@ page{
   border-radius: 20px;
   line-height: 42px;
   padding: 2px;
+}
+
+.button-sp-area{
+    margin: 0 auto;
+    padding-top: 15px;
+    width: 60%;
+}
+.mini-btn{
+    margin-right: 5px;
 }
