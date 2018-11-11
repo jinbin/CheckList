@@ -43,8 +43,8 @@
     <view class="page__hd">
       <view class="page__title">有钱任性</view>
       <navigator url="/pages/reward/reward">
-      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\nPowered by 
-      <p style="color:#00BFFF">你</p></view>
+      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n你好, 
+      <p style="color:#00BFFF">土豪</p></view>
       </navigator>
     </view>
 
@@ -56,26 +56,3 @@
     <view class="page__hd">
       <ad unit-id="adunit-a13bd903f2e4a182"></ad>
     </view>
-
-  <!-- <view class="page__hd">
-      <view class="page__title">清单广场</view>
-      <navigator url="/pages/about/about?key=aboutkoudai">
-      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n清单就是这样的有益约束下的产物。清单提供了一些列的观点，这些观点之间有联系性，而且具有可操作性。口袋清单希望可以收集到足够的优质清单，也有能力产出高质量的清单。
-      <p style="color:#00BFFF">【更多介绍请点击】</p>
-      </view>
-      </navigator>
-  </view> -->
-
-	<!-- <view class="page-body">
-		<view class="weui-cells weui-cells_after-title">
-			<block wx:for="{{ components }}" wx:key="">
-          <navigator url="{{ item.url }}" class="weui-cell weui-cell_access" hover-class="weui-cell_active" open-type="{{item.isTab ? 'switchTab':'navigate'}}"> 
-			        <view class="weui-cell__hd">
-			            <image src="{{ item.icon }}" style="margin-right: 5px;vertical-align: middle;width:20px; height: 20px;"></image>
-			        </view>
-			        <view class="weui-cell__bd">{{ item.title }}</view>
-			        <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-			    </navigator>
-		    </block>
-		</view>
-  </view> -->
