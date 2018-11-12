@@ -5,23 +5,6 @@
       <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n这是一款在不断变化，不断拓展可能性的小程序。在这个充满不确定性的世界里，不去追求确定的未来，而是努力拓展未来的可能性。</view>
   </view>
 
-    <view class="page__hd">
-      <view class="page__title">关于头马</view>
-      <navigator url="/pages/tm/loc/loc">
-      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n关于
-      <p style="color:#00BFFF">西子双语演讲俱乐部</p>
-      </view>
-      </navigator>
-      <navigator url="/pages/tm/clock/set/set">
-      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n点击
-      <p style="color:#00BFFF">时间官工具</p>
-      </view>
-      </navigator>
-      <view class="page__desc" bindtap='toMiniProgram'>\r\n\r\n\r\n\r\n\r\n\r\n\r\n点击
-      <p style="color:#00BFFF">头马助手</p>
-      </view>
-    </view>
-
   <view class="page__hd">
       <view class="page__title">了解清单</view>
       <navigator url="/pages/about/about?key=about">
@@ -31,14 +14,18 @@
       </navigator>
   </view>
 
-    <!-- <view class="page__hd">
-      <view class="page__title">关于你的2018</view>
-      <navigator url="/pages/my/leftdays/leftdays">
-      <view class="page__desc">\r\n\r\n\r\n\r\n\r\n\r\n\r\n
-        <p style="color:#00BFFF">【点击查看】</p>
+      <view class="page__hd">
+      <view class="page__title">友情推荐</view>
+
+      <view id="touma" class="page__desc" bindtap='toMiniProgram'>\r\n\r\n\r\n\r\n\r\n\r\n\r\n点击
+      <p style="color:#00BFFF">头马助手</p>
       </view>
-      </navigator>
-    </view> -->
+
+      <view id="xizi" class="page__desc" bindtap='toMiniProgram'>\r\n\r\n\r\n\r\n\r\n\r\n\r\n点击
+      <p style="color:#00BFFF">西子双语演讲俱乐部</p>
+      </view>
+      
+    </view>
 
     <view class="page__hd">
       <view class="page__title">有钱任性</view>

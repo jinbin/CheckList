@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/my/leftdays/leftdays",
     "pages/menu/menu",
     "pages/tm/clock/set/set",
     "pages/tm/clock/countdown/countdown", 
@@ -12,7 +13,6 @@
     "pages/reward/reward",
     "pages/comment/comment",
     "pages/my/officialAccount/offcialAccount",
-    "pages/my/leftdays/leftdays",
     "pages/tm/loc/loc",
     "pages/tm/tm/tm"
 
@@ -26,16 +26,10 @@
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/menu/menu",
-        "iconPath": "./images/home.png",
-        "selectedIconPath": "images/home-selected.png",
-        "text": "清单广场"
-      },
-      {
-        "pagePath": "pages/collect/collect",
+        "pagePath": "pages/my/leftdays/leftdays",
         "iconPath": "./images/account.png",
         "selectedIconPath": "images/account-selected.png",
-        "text": "收藏夹"
+        "text": "倒计时"
       },
       {
         "pagePath": "pages/my/my",

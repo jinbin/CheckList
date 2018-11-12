@@ -41,10 +41,18 @@ Page({
   },
 
   toMiniProgram: function (e) {
-    console.log("toMiniProgram")
+    var toAppId
+    var toPath
+    if (e.currentTarget.id == "touma"){
+      toAppId = "wx16c76d4762cbe0b3"
+      toPath = "pages/tm/clock/set/set"
+    }else if (e.currentTarget.id == "xizi"){
+      toAppId = "wx16c76d4762cbe0b3"
+      toPath = "pages/tm/loc/loc"
+    }
     wx.navigateToMiniProgram({
-      appId: 'wx16c76d4762cbe0b3',
-      path: 'pages/tm/clock/set/set',
+      appId: toAppId,
+      path: toPath,
       extraData: {
         foo: 'bar'
       },
