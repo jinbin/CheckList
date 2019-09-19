@@ -1,0 +1,35 @@
+<!--pages/knowledge/knowledge.wxml-->
+<swiper class="swiper" style="height: {{banner_height}}%" indicator-dots="true" autoplay="true" interval="5000" duration="1000" circular="true">
+  <block wx:for="{{banners}}">
+    <swiper-item>
+      <image src="{{item.url}}" bindtap="{{item.bind}}" class="banner" mode="widthFix" />
+    </swiper-item>
+  </block>
+</swiper>
+
+<official-account></official-account>
+
+<view>
+  <form report-submit="true" bindsubmit="getIntro">
+    <view class="window3" style="padding:10rpx;">
+      <view class="box3" style="">
+        <button id="mem" size="mini" style="" formType="submit">
+          <image style="width:100rpx;height:100rpx" src="../../images/知识库.png"></image>
+        </button>
+        <view class="downText" style="color:#9d441b;">工程管理硕士</view>
+      </view>
+      <view class="box3" style="">
+        <button id="msie" size="mini" style="" formType="submit">
+          <image style="width:100rpx;height:100rpx" src="../../images/topic_sel.png"></image>
+        </button>
+        <view class="downText">MSIE</view>
+      </view>
+      <!-- <view class="box3" style="">
+        <button id="toumayanjiang" size="mini" style="" formType="submit">
+          <image style="width:100rpx;height:100rpx" src="../../images/小程序.png"></image>
+        </button>
+        <view class="downText">头马演讲</view>
+      </view> -->
+    </view>
+  </form>
+</view>

@@ -1,61 +1,251 @@
 // pages/my/my.js
+
+var util = require('../../utils/util.js');
+const db = wx.cloud.database({
+  env: "pro11-d3fcc0"
+})
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    components: [
-      // {
-      //   title: '收藏夹',
-      //   remark: '收藏夹',
-      //   url: '/pages/collect/collect',
-      //   icon: '../../images/find-selected.png',
-      //   isTab: true 
-      // },
-      // {
-      //   title: '联系作者',
-      //   remark: '联系作者',
-      //   url: '/pages/contact/contact',
-      //   icon: '../../images/find-selected.png',
-      // },
-      // {
-      //   title: '公众号',
-      //   remark: '公众号',
-      //   url: '/pages/my/officialAccount/offcialAccount',
-      //   icon: '../../images/find-selected.png',
-      // },
-      {
-        title: '设置',
-        remark: '设置',
-        url: '/pages/settings/settings',
-        icon: '../../images/find-selected.png',
+    openId: "",
+    time: "",
+    appId: "wx8abaf00ee8c3202e",
+    tt_appId: "wx4c4b54bc609bd79e",
+    page_ft: {
+      data: "Copyright © 2019-2020 可能性工作室"
+    },
+    extraData: {
+      id: "43654",
+      // 自定义参数，具体参考文档
+      customData: {
+        clientInfo: '',
+        imei: ''
       }
-      // {
-      //   title: '有钱任性',
-      //   remark: '有钱任性',
-      //   url: '/pages/reward/reward',
-      //   icon: '../../images/find-selected.png',
-      // }
-    ]
+    },
+    components: [],
+    isAdError: false
   },
 
-  toMiniProgram: function (e) {
-    var toAppId
-    var toPath
-    if (e.currentTarget.id == "touma"){
-      toAppId = "wx16c76d4762cbe0b3"
-      toPath = "pages/tm/clock/set/set"
-    }else if (e.currentTarget.id == "xizi"){
-      toAppId = "wx16c76d4762cbe0b3"
-      toPath = "pages/tm/loc/loc"
-    }
+  onLoad: function (options) {
+    this.setData({
+      time: util.formatTime(new Date())
+    })
+  },
+
+  bindViewTap() {
     wx.navigateToMiniProgram({
-      appId: toAppId,
-      path: toPath,
+      appId: 'wxde40c5cf1d10c3d1',
+      path: 'pages/index/index?uid=xiaomeng&pakey=e1be9224',
       extraData: {
         foo: 'bar'
       },
+      envVersion: 'release',
+      success(res) { }
+    })
+  },
+
+  checkIn: function (e) {
+    wx.showModal({
+      content: "恭喜你发现神秘打卡通道，更多惊喜即将上线",
+      showCancel: false,
+      // confirmText: '',
+      confirmColor: '#ff7f50',
+      success: function (res) {
+        if (res.confirm) {
+          // wx.setClipboardData({
+          //   data: "wx16c76d4762cbe0b3",
+          //   success: function (res) {
+          //     wx.showToast({
+          //       title: "AppID复制成功"
+          //     })
+          //   }
+          // })
+        }
+      }
+    })
+  },
+
+  login: function (e) {
+    var that = this
+    wx.getSetting({
+      success: res => {
+        if (res.authSetting['scope.userInfo']) {
+          console.log("true")
+          that.setData({
+            isLogin: "已登录"
+          })
+        } else {
+          console.log("false")
+          that.setData({
+            isLogin: "登录了解更多"
+          })
+        }
+      }
+    })
+  },
+
+  linkTA: function (e) {
+    wx.showModal({
+      content: "关联步骤\n1. 登录微信公众号\n2. 小程序管理->添加\n3. 验证并关联小程序\n4. 输入小程序名称\n5. 点击确认即可",
+      showCancel: true,
+      confirmText: 'AppID',
+      confirmColor: '#ff7f50',
+      success: function (res) {
+        if (res.confirm) {
+          wx.setClipboardData({
+            data: "wx16c76d4762cbe0b3",
+            success: function (res) {
+              wx.showToast({
+                title: "名称已复制"
+              })
+            }
+          })
+          console.log('用户点击确定');
+        }
+      }
+    })
+  },
+
+  navigateTo: function (options) {
+    wx.navigateTo({
+      url: options.currentTarget.id
+    })
+  },
+
+  navigateToMiniProgram: function (options) {
+    wx.navigateToMiniProgram({
+      appId: options.currentTarget.id,
+      path: options.currentTarget.dataset.path
+    })
+  },
+
+  toBilingualSpeak: function (e) {
+    wx.navigateToMiniProgram({
+      appId: 'wx4c4b54bc609bd79e'
+    })
+  },
+
+  aderror: function (options) {
+    this.setData({
+      isAdError: true
+    })
+  },
+
+  saveOfficialQRCode: function (e) {
+    wx.showModal({
+      content: '搜索"头马演讲助手", 关注官方公众号, 回复"福利"有惊喜！',
+      showCancel: false,
+      confirmText: '去关注',
+      confirmColor: '#ff7f50',
+      success: function (res) {
+        if (res.confirm) {
+          wx.setClipboardData({
+            data: "头马演讲助手",
+            success: function (res) {
+              wx.showToast({
+                title: "公众号名已复制"
+              })
+            }
+          })
+          console.log('用户点击确定');
+        }
+      }
+    })
+  },
+
+  saveQRCode: function (options) {
+    console.log(options)
+    var that = this
+    wx.getSetting({
+      success(res) {
+        console.log(res.authSetting["scope.writePhotosAlbum"])
+        if (res.authSetting["scope.writePhotosAlbum"]) {
+          wx.saveImageToPhotosAlbum({
+            //filePath: "images/qrcode.jpg",
+            filePath: options.currentTarget.id,
+            success: function (res) {
+              console.log("save success!")
+
+              wx.showModal({
+                content: '图片已保存到相册，赶紧发给需要的小伙伴吧~',
+                showCancel: false,
+                confirmText: '好的',
+                confirmColor: '#333',
+                success: function (res) {
+                  if (res.confirm) {
+                    console.log('用户点击确定');
+                  }
+                }
+              })
+            }
+          })
+        } else {
+          wx.showModal({
+            content: '此功能需要打开保存图片到相册的权限后才可使用~',
+            showCancel: false,
+            confirmText: '好的',
+            confirmColor: '#333',
+            success: function (res) {
+              if (res.confirm) {
+                wx.authorize({
+                  scope: 'scope.writePhotosAlbum'
+                })
+                wx.openSetting({})
+              }
+              // wx.getSetting({
+              //   success(res) {
+              //     if(!res.authSetting["scope.writePhotosAlbum"]){
+              //       wx.openSetting({})
+              //     }
+              //   }
+              // })
+              // wx.openSetting({
+              //   success(res) {
+              //     console.log("open Setting success")
+              //     console.log(res)
+              //   },
+              //   fail(res) {
+              //     console.log("open Setting fail")
+              //     console.log(res)
+              //   }
+              // })
+            }
+          })
+        }
+      }
+    })
+  },
+
+  bindGetUserInfo: function (e) {
+    var that = this
+    if (e.detail.userInfo) {
+      //用户按了允许按钮
+      that.setData({
+        isLogin: "已登录"
+      })
+    } else {
+      //用户按了拒绝按钮
+      that.setData({
+        isLogin: "登录了解更多"
+      })
+    }
+  },
+
+  submitLocation: function (e) {
+    wx.navigateTo({
+      url: '/pages/map/submit/submit',
+    })
+  },
+
+  toMiniProgram: function (e) {
+    console.log("toMiniProgram")
+    wx.navigateToMiniProgram({
+      appId: 'wx09a49d05a365a4e6',
+      path: "pages/contact/contact",
       // envVersion: 'trial',
       success(res) {
         console.log("SUCCESS")
@@ -63,69 +253,52 @@ Page({
     })
   },
 
-  copyText: function (e) {
-    wx.setClipboardData({
-      data: e.currentTarget.dataset.text,
-      success: function (res) {
-        wx.showToast({
-          title: "内容已复制"
-        })
-      }
-    })
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
-  },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+    return {
+      title: "浙大最新的新闻这里都有，赶紧来看！",
+      imageUrl: '/images/zju-min.jpeg'
+    }
+  },
+
+  fromPageFt: function () {
+    util.saveOfficialQRCode("可能性工作室")
   }
 })

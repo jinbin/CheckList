@@ -1,0 +1,33 @@
+<!--pages/map/map.wxml-->
+<form report-submit="true" bindsubmit="selectCampus">
+  <view class="window" style="background-color:#0280ff">
+    <block wx:for="{{campuses}}">
+      <view class="box" style="">
+        <button id="{{item.id}}" size="mini" style="background-color:{{colors[index]}}" formType="submit">
+          <image style="width:60rpx;height:60rpx" src="{{item.icon}}"></image>
+        </button>
+        <view class="downText" style="color:white;font-size:26rpx;">{{item.name}}</view>
+      </view>
+    </block>
+  </view>
+</form>
+
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="{{scale}}" markers="{{markers}}" bindmarkertap="markertap" bindtap="maptap" bindcallouttap="bindcallouttap" show-location show-compass show-scale style="width: 100%; height: 70%;">
+</map>
+
+<view wx:if="{{place}}" class="location">
+  <view class="card">
+    <view class="card_text">
+      {{place}}
+    </view>
+    <view class="navi_pic" bindtap="navi" data-markerid="{{markerId}}">
+      <image style="width:60rpx; height:60rpx" src="/images/导航.png"></image>
+    </view>
+  </view>
+</view>
+
+<!-- <navigator url="/pages/map/submit/submit">
+  <view class="circle-float">
+    上报
+  </view>
+</navigator> -->

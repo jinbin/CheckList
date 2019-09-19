@@ -15,13 +15,16 @@ Page({
     var time = Date.parse(new Date())
     time = time / 1000
 
-    //var time1 = Date.parse("2019-01-01 00:00")
+    // var time1 = Date.parse("2020-01-01 00:00")
+
     var time1
     if (options.duetime){
       time1 = options.duetime
     }else{
       //2019-01-01 00:00
-      time1 = 1546272000
+      // time1 = 1546272000
+      //2020-01-01 00:00
+      time1 = 1577808000
     }
      
 
@@ -32,14 +35,14 @@ Page({
     if(options.title){
       title = options.title
     }else{
-      title = "2018倒计时"
+      title = "2019倒计时"
     }
 
     var content
     if (options.content) {
       content = options.content
     } else {
-      content = "你的2018"
+      content = "你的2019"
     }
   
     this.setData({
@@ -96,7 +99,7 @@ Page({
    */
   onShareAppMessage: function (options) {
     return {
-      title: "2018倒计时"
+      title: "2019倒计时"
     }
   }
 })

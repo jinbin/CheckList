@@ -1,0 +1,21 @@
+/* pages/map/submit/submit.wxss */
+
+.window {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 10rpx;
+  justify-content:center;
+  padding-top: 60rpx;
+}
+
+.box {
+  width: 20%;
+  height: 140rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  /* padding: 10rpx; */
+}

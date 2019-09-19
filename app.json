@@ -1,46 +1,63 @@
 {
   "pages": [
+    "pages/map/map/map",
+    "pages/index/index",
+    "pages/map/submit/submit",
+    "pages/reading/reading",
+    "pages/webview/webview",
     "pages/my/leftdays/leftdays",
     "pages/menu/menu",
     "pages/tm/clock/set/set",
-    "pages/tm/clock/countdown/countdown", 
+    "pages/tm/clock/countdown/countdown",
     "pages/my/my",
+    "pages/my/towebpage/towebpage",
     "pages/about/about",
     "pages/collect/collect",
     "pages/list/list",
     "pages/contact/contact",
     "pages/settings/settings",
     "pages/reward/reward",
-    "pages/comment/comment",
-    "pages/my/officialAccount/offcialAccount",
-    "pages/tm/loc/loc",
-    "pages/tm/tm/tm"
-
+    "pages/my/officialAccount/offcialAccount"
   ],
   "window": {
-    "backgroundTextStyle": "black",
-    "navigationBarBackgroundColor": "#FF8C00",
-    "navigationBarTitleText": "可能性+",
-    "navigationBarTextStyle": "black"
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#0280ff",
+    "navigationBarTitleText": "浙大助手",
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/my/leftdays/leftdays",
-        "iconPath": "./images/account.png",
-        "selectedIconPath": "images/account-selected.png",
-        "text": "倒计时"
+        "pagePath": "pages/map/map/map",
+        "iconPath": "/images/tabBar/homepage.png",
+        "selectedIconPath": "images/tabBar/homepage-sel.png",
+        "text": "地图"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "./images/tabBar/miniprogram.png",
+        "selectedIconPath": "images/tabBar/miniprogram-sel.png",
+        "text": "通知"
       },
       {
         "pagePath": "pages/my/my",
-        "iconPath": "./images/find.png",
-        "selectedIconPath": "images/find-selected.png",
+        "iconPath": "/images/tabBar/me-sel.png",
+        "selectedIconPath": "/images/tabBar/me.png",
         "text": "我的"
       }
     ]
   },
   "navigateToMiniProgramAppIdList": [
-    "wx16c76d4762cbe0b3"
+    "wx16c76d4762cbe0b3", 
+    "wx83b32b79374f6ac2",
+    "wx18a2ac992306a5a4",
+    "wx4c4b54bc609bd79e"
   ],
-  "debug": true
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
 }

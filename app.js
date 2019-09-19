@@ -16,6 +16,11 @@ App({
       this.globalData.opened = true
     }
 
+    wx.cloud.init({
+      traceUser: true,
+      env: 'pro11-d3fcc0'
+    })
+
     // 登录
     wx.login({
       success: res => {

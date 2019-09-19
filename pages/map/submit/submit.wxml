@@ -1,0 +1,22 @@
+<!--pages/map/submit/submit.wxml-->
+
+<view class="window">
+  <view class="box">
+    <button bindtap="getLocation" type="primary" style="font-size: 20rpx">获取当前定位</button>
+  </view>
+</view>
+
+<form bindsubmit="formSubmit">
+  <view wx:if="{{latitude != 0 && longitude != 0}}" style="padding: 60rpx;">
+    <view>纬度: {{latitude}}</view>
+    <view>经度: {{longitude}}</view>
+
+    <view class="section__title">地名</view>
+    <input name="place" placeholder="please input here" />
+    <view class="window">
+      <view class="box">
+        <button form-type="submit" type="primary">Submit</button>
+      </view>
+    </view>
+  </view>
+</form>
